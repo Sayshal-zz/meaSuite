@@ -169,10 +169,15 @@ public class MeaChat extends JPanel {
 					isCommand = true;
 				}else if(line.startsWith("/pm")){
 					String parts[] = line.split(" ");
-					if(parts.length>1){
-						printer.println("whois "+parts[1]);
+					if(parts.length>3){
+						String message = "";
+						String to = parts[1];
+						for(int i=2;i<parts.length;i++){
+							message = message.concat(parts[i]+" ");
+						}
+						printer.println("pm "+to+" "+message);
 					}else{
-						addToChat("No username selected! /whois [username]");
+						addToChat("Not enough arguments! /pm [user] [message]");
 					}
 					isCommand = true;
 				}else if(line.startsWith("/p")){
@@ -184,9 +189,9 @@ public class MeaChat extends JPanel {
 								message = message.concat(word+" ");
 							}
 						}
-						printer.println("meachatonly "+message);
+						printer.println("meachatonly <msg> "+message);
 					}else{
-						addToChat("No username selected! /whois [username]");
+						printer.println("meachatonly <user> "+username);
 					}
 					isCommand = true;
 				}else if(line.startsWith("/help") ||
