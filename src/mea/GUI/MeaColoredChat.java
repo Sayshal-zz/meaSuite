@@ -19,11 +19,9 @@ public class MeaColoredChat {
 		}else if(message.startsWith(" [IRC]")){
 			c = Color.cyan;
 		}
-		//int offset = pane.getText().length();
-		//pane.setText(pane.getText() + message);  
 	    SimpleAttributeSet attrs = new SimpleAttributeSet();  
 	    StyledDocument doc = pane.getStyledDocument();  	   
-	    StyleConstants.setForeground(attrs, c);  
+	    StyleConstants.setForeground(attrs, c);     
 	    try {
 			doc.insertString(doc.getLength(), message, attrs);
 		} catch (BadLocationException e) {

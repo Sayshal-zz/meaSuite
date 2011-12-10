@@ -33,9 +33,7 @@ public class Launcher {
 	static Socket sock;
 	static String username = "meaChatClient";
 	static String password = "meaChatPassword";
-	//static String server = "96.52.204.164";  // TODO : TEMP
-	private String warningSoILookHereAndResetThisSetting = "";
-	static String server = "68.148.10.71";
+	static String server = "96.52.204.164"; 
 	
 	static Console console = System.console();
 	
@@ -146,7 +144,7 @@ public class Launcher {
 					meaChat.printer.println("disconnect "+username);
 				}
 				try {
-					meaChat.sock.close();
+					if(meaChat.sock != null) meaChat.sock.close();
 				} catch (IOException e1) {
 					//e1.printStackTrace();
 					try{

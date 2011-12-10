@@ -7,6 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.Console;
@@ -213,15 +215,14 @@ public class MeaChat extends JPanel {
 			}
 		});
 		
-		window.addFocusListener(new FocusListener(){
-			public void focusGained(FocusEvent e) {
+		window.addWindowFocusListener(new WindowFocusListener(){
+			public void windowGainedFocus(WindowEvent e) {
 				if(popup != null) popup.despawn();
 			}
-
-			public void focusLost(FocusEvent e) {
+			
+			public void windowLostFocus(WindowEvent e) {
 				//Do nothing
 			}
-			
 		});
 	}
 	
@@ -240,7 +241,7 @@ public class MeaChat extends JPanel {
 				message = message.concat(parts[i]+" ");
 			}
 			popup = new MeaPopup(username+" New "+tag+" msg!", message, window);
-			popup.show();
+			if(!window.hasFocus()) popup.show();
 		}
 		if(IRCPane.isTag(message)){
 			IRCPane.append(" "+message+"\n");
@@ -253,7 +254,7 @@ public class MeaChat extends JPanel {
 				message = message.concat(parts[i]+" ");
 			}
 			popup = new MeaPopup(username+" New "+tag+" msg!", message, window);
-			popup.show();
+			if(!window.hasFocus()) popup.show();
 		}
 		if(MeaPane.isTag(message)){
 			MeaPane.append(" "+message+"\n");
@@ -266,7 +267,7 @@ public class MeaChat extends JPanel {
 				message = message.concat(parts[i]+" ");
 			}
 			popup = new MeaPopup(username+" New "+tag+" msg!", message, window);
-			popup.show();
+			if(!window.hasFocus()) popup.show();
 		}
 		if(message.startsWith("[MOTD]") ||
 				message.startsWith("[WHOIS]") ||

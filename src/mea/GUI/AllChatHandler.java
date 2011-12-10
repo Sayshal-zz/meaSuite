@@ -1,6 +1,7 @@
 package mea.GUI;
 
 import java.awt.Color;
+import java.awt.Insets;
 
 import javax.swing.JTextPane;
 
@@ -11,7 +12,8 @@ public class AllChatHandler extends JTextPane implements MeaChatFramework{
 	
 	public AllChatHandler(String tag) {
 		this.tag = tag;
-		this.setBackground(Color.black);
+		//this.setBackground(Color.black);
+		this.setMargin(new Insets(5, 5, 5, 5));
 	}
 
 	public boolean isTag(String line){

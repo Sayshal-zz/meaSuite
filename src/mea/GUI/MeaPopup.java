@@ -8,6 +8,8 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
@@ -61,6 +63,7 @@ public class MeaPopup {
 		popup.setResizable(false);
 		popup.setLocation(location);
 		popup.setAlwaysOnTop(true);
+		popup.setFocusable(false);
 		popup.add(content);
 		if(!window.hasFocus()) popup.setVisible(true);
 		if(!window.hasFocus()){
@@ -93,8 +96,10 @@ public class MeaPopup {
 	}
 	
 	public void despawn(){
-		popup.setVisible(false);
-		popup.dispose();
+		if(popup.isVisible()){
+			popup.setVisible(false);
+			popup.dispose();
+		}
 	}
 
 @SuppressWarnings("serial")
