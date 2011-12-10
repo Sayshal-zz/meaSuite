@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.util.HashMap;
+import java.util.Set;
 import java.util.Vector;
 
 import org.bukkit.Bukkit;
@@ -15,6 +16,7 @@ public class MeaConnections {
 	private HashMap<Socket, PrintStream> writers = new HashMap<Socket, PrintStream>();
 	private HashMap<Socket, BufferedReader> readers = new HashMap<Socket, BufferedReader>();
 	private HashMap<Socket, MeaChatThread> chatThreads = new HashMap<Socket, MeaChatThread>();
+	private HashMap<Integer, MeaChatThread> chatThreadsIterable = new HashMap<Integer, MeaChatThread>();
 	private Vector<Socket> clients = new Vector<Socket>();
 	
 	@SuppressWarnings("unused")
@@ -63,13 +65,20 @@ public class MeaConnections {
 			MeaChatThread chThread = new MeaChatThread(socket, writers.get(socket), readers.get(socket), chat, server, this, irc);
 			Thread thread = new Thread(chThread);
 			thread.start();
+			int chID = chatThreadsIterable.size()+1;
+			chThread.id = chID;
 			chatThreads.put(socket, chThread);
+			chatThreadsIterable.put(chID, chThread);
 		}catch (Exception e){
 			e.printStackTrace();
 		}
 	}
 	
 	public void removeConnection(Socket socket, String username){
+		int chID = chatThreads.get(socket).id;
+		chatThreadsIterable.remove(chID);
+		chatThreads.get(socket).close();
+		chatThreads.remove(socket);
 		readers.remove(socket);
 		writers.remove(socket);
 		clients.remove(socket);
@@ -94,6 +103,10 @@ public class MeaConnections {
 			removeConnectionNoClient(client, getUsername(client));
 		}
 		clients.clear();
+		chatThreads.clear();
+		chatThreadsIterable.clear();
+		writers.clear();
+		readers.clear();
 	}
 	
 	public void killIRC(){
@@ -104,6 +117,17 @@ public class MeaConnections {
 	
 	public String getUsername(Socket socket){
 		return chatThreads.get(socket).getUsername();
+	}
+	
+	public Socket getSocket(String username){
+		Socket user = null;
+		for(int i=0;i<=chatThreadsIterable.size()+1;i++){
+			if(chatThreadsIterable.containsKey(i)){
+				MeaChatThread thread = chatThreadsIterable.get(i);
+				user = thread.socket;
+			}
+		}
+		return user;
 	}
 	
 	public void broadcast(String message){
@@ -134,6 +158,10 @@ public class MeaConnections {
 	
 	public void sendToMea(String message, Socket sock){
 		writers.get(sock).println(message);
+	}
+	
+	public void sendTo(Socket socket, String message){
+		writers.get(socket).println(message);
 	}
 
 	public boolean isLoggedIn(String username) {

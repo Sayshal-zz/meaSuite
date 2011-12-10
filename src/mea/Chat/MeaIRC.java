@@ -2,18 +2,23 @@ package mea.Chat;
 
 import java.io.IOException;
 
+import mea.Hook.MeaHook;
+
 import org.jibble.pircbot.IrcException;
 import org.jibble.pircbot.NickAlreadyInUseException;
 import org.jibble.pircbot.PircBot;
+import org.jibble.pircbot.User;
 
 public class MeaIRC extends PircBot{
 	
 	private MeaChat chat;
+	private MeaHook hook;
 	private boolean doMC = false;
 	private boolean doIRC = false;
 	
-	public MeaIRC(MeaChat chat) {
+	public MeaIRC(MeaChat chat, MeaHook hook) {
 		this.chat = chat;
+		this.hook = hook;
 		setName("meaBot");
 		setAutoNickChange(true);
 		boolean connected = true;
@@ -41,26 +46,23 @@ public class MeaIRC extends PircBot{
 				message = message.substring(0, 200);
 				chat.toIRC("[mea] [meaBot:IRC] * Sorry "+sender+"! Message was too long, shortened to 200 characters.");
 			}
-			chat.message("[IRC] ["+sender+"] "+message);
+			hook.onMessage(sender, "IRC", message);
 		}
 	}
 	
 	public void onJoin(String channel, String sender, String login, String hostname, String message){
-		if(login!=this.getName()){
-			chat.message("[IRC] [meaBot] * User joined: "+login);
-		}
+		hook.onJoin(sender, "IRC");
 	}
 	
 	public void onKick(String channel, String kickerNick, String kickerLogin, String kickerHostname, String recipientNick, String reason){
-		if(recipientNick!=getName()){
-			chat.message("[IRC] [meaBot] * User kicked: "+recipientNick+" for \""+reason+"\"");
+		hook.onLeave(recipientNick, "IRC", true, reason);
+		if (recipientNick.equalsIgnoreCase(getNick())) {
+		    joinChannel(channel);
 		}
 	}
 	
 	public void onQuit(String sourceNick, String sourceLogin, String sourceHostname, String reason){
-		if(sourceNick!=getName()){
-			chat.message("[IRC] [meaBot] * User quit: "+sourceNick+" ("+reason+")");
-		}
+		hook.onLeave(sourceNick, "IRC", false, reason);
 	}
 	
 	public boolean MinecraftToIRC(){
@@ -80,7 +82,7 @@ public class MeaIRC extends PircBot{
 	}
 
 	public void kill(){
-		chat.message("[IRC] [meaBot] * Shutting down bot...");
+		hook.onMessage("meaBot", "IRC", "* Shutting down bot...");
 		disconnect();
 	}
 	
@@ -92,4 +94,46 @@ public class MeaIRC extends PircBot{
 		}
 	}
 	
+	public boolean userOnline(String username){
+		User users[] = getUsers(this.getChannels()[0]);
+		if(users.length>0){
+			for(User user : users){
+				if(user.getNick().toLowerCase().startsWith(username.toLowerCase()) || user.getNick().equalsIgnoreCase(username)){
+					return true;
+				}
+			}
+			return false;
+		}else{
+			return false;
+		}
+	}
+	
+	public User getUser(String username){
+		User users[] = getUsers(this.getChannels()[0]);
+		if(users.length>0){
+			for(User user : users){
+				if(user.getNick().toLowerCase().startsWith(username.toLowerCase()) || user.getNick().equalsIgnoreCase(username)){
+					return user;
+				}
+			}
+			return null;
+		}else{
+			return null;
+		}
+	}
+	
+	public boolean pm(String username, String message){
+		User user = getUser(username);
+		if(user != null){
+			this.sendMessage(user.getNick(), message);
+			return true;
+		}
+		return false;
+	}
+	
+	public String getIP(User user){
+		String IP = "unknown";
+		//TODO: Find a work around
+		return IP;
+	}
 }

@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.List;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MeaServerSocket {
@@ -13,7 +16,6 @@ public class MeaServerSocket {
 	private String server = "[Unknown Server]";
 	private int port = 4408;
 	private MeaChat chat;
-	@SuppressWarnings("unused")
 	private JavaPlugin plugin;
 	private boolean run = true;
 	private MeaConnections connections;
@@ -85,6 +87,64 @@ public class MeaServerSocket {
 				}
 			}else{
 				connections.sendToMea("noauth", sock);
+			}
+		}else if(line.startsWith("whois")){
+			String parts[] = line.split(" ");
+			if(parts.length<2){
+				connections.sendTo(sock, "Too few arguments! /whois user");
+			}else{
+				String target = parts[1];
+				List<Player> matches = Bukkit.matchPlayer(target);
+				if(matches.size()>0){
+					connections.sendTo(sock, "Username: "+matches.get(0).getName());
+					connections.sendTo(sock, "IP: "+matches.get(0).getAddress().getHostString().replaceAll("\\/", ""));
+					connections.sendTo(sock, "Logged into: Minecraft");
+				}else{
+					if(irc.userOnline(target)){
+						connections.sendTo(sock, "Username: "+irc.getUser(target).getNick());
+						connections.sendTo(sock, "IP: "+irc.getIP(irc.getUser(target)));
+						connections.sendTo(sock, "Logged into: IRC");
+					}else{
+						if(connections.isLoggedIn(target)){
+							
+						}
+					}
+				}
+			}
+		}else if(line.startsWith("pm")){
+			String parts[] = line.split(" ");
+			if(parts.length<3){
+				connections.sendTo(sock, "Too few arguments! /pm [user] [message]");
+			}else{
+				String to = parts[1];
+				String message = "";
+				for(int i=2;i<parts.length;i++){
+					message = message.concat(parts[i]+" ");
+				}
+				List<Player> matches = Bukkit.matchPlayer(to);
+				if(matches.size()>0){
+					MeaStringFormat format = new MeaStringFormat(plugin);
+					matches.get(0).sendMessage(format.formatPM(to, connections.getUsername(sock), message, "mea"));
+				}else{
+					if(irc.userOnline(to)){
+						MeaStringFormat format = new MeaStringFormat(plugin);
+						irc.pm(to, format.formatPM(to, connections.getUsername(sock), message, "mea"));
+					}else{
+						if(connections.isLoggedIn(to)){
+							MeaStringFormat format = new MeaStringFormat(plugin);
+							connections.sendToMea(format.formatPM(to, connections.getUsername(sock), message, "mea"), connections.getSocket(to));
+						}
+					}
+				}
+			}
+		}else if(line.startsWith("meachatonly")){
+			String parts[] = line.split(" ");
+			if(parts[1].equalsIgnoreCase("<msg>")){
+				
+			}else if(parts[1].equalsIgnoreCase("<user>")){
+				
+			}else{
+				connections.sendTo(sock, "** Command not in proper format! "+line);
 			}
 		}else{
 			broadcast(line);

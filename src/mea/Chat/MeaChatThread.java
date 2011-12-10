@@ -6,11 +6,12 @@ import java.net.Socket;
 
 public class MeaChatThread implements Runnable{
 	
-	private Socket socket;
 	private BufferedReader reader;
 	private MeaConnections connections;
 	private String username = "meaSuiteUser";
 	
+	public int id = 0;
+	public Socket socket;
 
 	@SuppressWarnings("unused")
 	private MeaIRC irc;
@@ -31,6 +32,10 @@ public class MeaChatThread implements Runnable{
 		this.server = server;
 		this.connections = connections;
 		this.irc = irc;
+	}
+	
+	public void close(){
+		running = false;
 	}
 	
 	public void setUsername(String username){
