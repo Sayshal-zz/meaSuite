@@ -292,6 +292,9 @@ public class MeaLogger {
 	
 	public static void copyFileTo(File original, File destination, boolean append){
 		try{
+			if(!destination.exists()){
+				destination.createNewFile();
+			}
 			BufferedReader in = new BufferedReader(new FileReader(original));
 			BufferedWriter out = new BufferedWriter(new FileWriter(destination, append));
 			String line;
