@@ -1,0 +1,21 @@
+
+  shop:
+    description: shop
+  buy:
+    description: shop
+  sell:
+    description: shop
+  sellall:
+    description: shop
+  sellinv:
+    description: shop
+  slookup:
+    description: shop
+  shopyes:
+    description: shop confirm
+  shopno:
+    description: shop confirm
+  money:
+    description: economy
+  moneytop:
+    description: alias for /money top

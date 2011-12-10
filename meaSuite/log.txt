@@ -1,0 +1,1177 @@
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Disconnected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [Solani64] oh
+[IRC] [D3n3r0] [MC] Solani64: oh
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[MC] [ragingalbino] im not stupid i knwo the rules
+[MC] [ragingalbino] im not stupid i knwo the rules
+[IRC] [D3n3r0] [MC] ragingalbino: im not stupid i knwo the rules 
+[IRC] [D3n3r0] [MC] ragingalbino: im not stupid i knwo the rules 
+[MC] [Solani64] wait... isnt it automatic ?
+[MC] [Solani64] wait... isnt it automatic ?
+[IRC] [D3n3r0] [MC] Solani64: wait... isnt it automatic ?
+[IRC] [D3n3r0] [MC] Solani64: wait... isnt it automatic ?
+[mea] [meaChatClient] meaChatClient is Turt2Live btw guys
+[mea] [meaChatClient] meaChatClient is Turt2Live btw guys
+[mea] [Sayshal] He bought it a while ago, something happend
+[mea] [Sayshal] He bought it a while ago, something happend
+[MC] [Solani64] ethandude what is username?
+[MC] [Solani64] ethandude what is username?
+[IRC] [D3n3r0] [MC] Solani64: ethandude what is username?
+[IRC] [D3n3r0] [MC] Solani64: ethandude what is username?
+[MC] [ragingalbino] ethanxdude
+[IRC] [D3n3r0] [MC] ragingalbino: ethanxdude 
+[MC] [ragingalbino] ethanxdude
+[IRC] [D3n3r0] [MC] ragingalbino: ethanxdude 
+[MC] [Solani64] exactly?
+[MC] [Solani64] exactly?
+[IRC] [D3n3r0] [MC] Solani64: exactly?
+[IRC] [D3n3r0] [MC] Solani64: exactly?
+[MC] [ragingalbino] he'll be back in a min
+[MC] [ragingalbino] he'll be back in a min
+[IRC] [D3n3r0] [MC] ragingalbino: he'll be back in a min 
+[IRC] [D3n3r0] [MC] ragingalbino: he'll be back in a min 
+[MC] [ragingalbino] yeah i htink so
+[MC] [ragingalbino] yeah i htink so
+[IRC] [D3n3r0] [MC] ragingalbino: yeah i htink so 
+[IRC] [D3n3r0] [MC] ragingalbino: yeah i htink so 
+[MC] [Solani64] he on\?
+[MC] [Solani64] he on\?
+[IRC] [D3n3r0] [MC] Solani64: he on\?
+[IRC] [D3n3r0] [MC] Solani64: he on\?
+[MC] [ragingalbino] ethanxdude
+[IRC] [D3n3r0] [MC] ragingalbino: ethanxdude 
+[MC] [ragingalbino] ethanxdude
+[IRC] [D3n3r0] [MC] ragingalbino: ethanxdude 
+[MC] [ragingalbino] he will be on in a min
+[MC] [ragingalbino] he will be on in a min
+[IRC] [D3n3r0] [MC] ragingalbino: he will be on in a min 
+[IRC] [D3n3r0] [MC] ragingalbino: he will be on in a min 
+[MC] [Dracozorack] what the fuck sayshal
+[MC] [Dracozorack] what the fuck sayshal
+[IRC] [D3n3r0] [MC] Dracozorack: what the fuck sayshal 
+[IRC] [D3n3r0] [MC] Dracozorack: what the fuck sayshal 
+[SERVER] setusername meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[MC] [Dracozorack] looks kinda cool
+[MC] [Dracozorack] looks kinda cool
+[IRC] [D3n3r0] [MC] Dracozorack: looks kinda cool 
+[IRC] [D3n3r0] [MC] Dracozorack: looks kinda cool 
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[mea] Client Connected: meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[MC] [Solani64] * Left Minecraft
+[MC] [Solani64] * Left Minecraft
+[IRC] [D3n3r0] [MC] [Solani64 leaves the game ]
+[IRC] [D3n3r0] [MC] [Solani64 leaves the game ]
+[MC] [DeChunk] * Left Minecraft
+[MC] [DeChunk] * Left Minecraft
+[MC] [ragingalbino] back
+[MC] [ragingalbino] back
+[IRC] [D3n3r0] [MC] [DeChunk leaves the game ]
+[IRC] [D3n3r0] [MC] [DeChunk leaves the game ]
+[IRC] [D3n3r0] [MC] ragingalbino: back 
+[IRC] [D3n3r0] [MC] ragingalbino: back 
+[MC] [DeChunk] * Joined Minecraft
+[MC] [DeChunk] * Joined Minecraft
+[IRC] [D3n3r0] [MC] [DeChunk joins the game]
+[IRC] [D3n3r0] [MC] [DeChunk joins the game]
+[mea] [meaChatClient] 
+[mea] [meaChatClient] 
+[mea] [meaChatClient]  
+[mea] [meaChatClient] WE HAVE AN INTERFACE. FK YEA
+[mea] [meaChatClient]  
+[mea] [meaChatClient] WE HAVE AN INTERFACE. FK YEA
+[mea] [Sayshal] Im here.
+[mea] [Sayshal] Im here.
+[MC] [Solani64] * Joined Minecraft
+[IRC] [D3n3r0] [MC] [Solani64 joins the game]
+[MC] [Solani64] * Joined Minecraft
+[IRC] [D3n3r0] [MC] [Solani64 joins the game]
+[mea] [Sayshal] Im on meaChat GUI...
+[mea] [Sayshal] Im on meaChat GUI...
+[MC] [Solani64] o
+[IRC] [D3n3r0] [MC] Solani64: o
+[MC] [Solani64] o
+[IRC] [D3n3r0] [MC] Solani64: o
+[mea] [meaChatClient] 
+[mea] [meaChatClient] No your not :P
+[mea] [meaChatClient] 
+[mea] [meaChatClient] No your not :P
+[mea] [meaChatClient] I am :P
+[mea] [meaChatClient] I am :P
+[mea] [meaChatClient] 
+[mea] [meaChatClient] 
+[MC] [Solani64] fuckkkkkkkkkkkkk damnittttttttt
+[MC] [Solani64] fuckkkkkkkkkkkkk damnittttttttt
+[IRC] [D3n3r0] [MC] Solani64: fuckkkkkkkkkkkkk damnittttttttt
+[IRC] [D3n3r0] [MC] Solani64: fuckkkkkkkkkkkkk damnittttttttt
+[MC] [DeChunk] * Left Minecraft
+[MC] [DeChunk] * Left Minecraft
+[IRC] [D3n3r0] [MC] [DeChunk leaves the game ]
+[IRC] [D3n3r0] [MC] [DeChunk leaves the game ]
+[MC] [Solani64] * Left Minecraft
+[MC] [Solani64] * Left Minecraft
+[IRC] [D3n3r0] [MC] [Solani64 leaves the game ]
+[IRC] [D3n3r0] [MC] [Solani64 leaves the game ]
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [ryandini77] solani
+[IRC] [D3n3r0] [MC] ryandini77: solani 
+[MC] [Solani64] oui
+[IRC] [D3n3r0] [MC] Solani64: oui
+[MC] [ryandini77] will u buy my wheat D:
+[IRC] [D3n3r0] [MC] ryandini77: will u buy my wheat D: 
+[MC] [Solani64] no
+[IRC] [D3n3r0] [MC] Solani64: no
+[MC] [ryandini77] i have toooo much
+[IRC] [D3n3r0] [MC] ryandini77: i have toooo much 
+[MC] [Solani64] srt
+[IRC] [D3n3r0] [MC] Solani64: srt
+[MC] [Solani64] *sry
+[IRC] [D3n3r0] [MC] Solani64: *sry
+[MC] [Dracozorack] then stop harvesting
+[IRC] [D3n3r0] [MC] Dracozorack: then stop harvesting 
+[MC] [Dracozorack] or give the kitchen some
+[IRC] [D3n3r0] [MC] Dracozorack: or give the kitchen some 
+[MC] [ryandini77] 9 stacks
+[IRC] [D3n3r0] [MC] ryandini77: 9 stacks 
+[MC] [Dracozorack] that's perfect!
+[IRC] [D3n3r0] [MC] Dracozorack: that's perfect! 
+[MC] [ryandini77] :3
+[IRC] [D3n3r0] [MC] ryandini77: :3 
+[MC] [Dracozorack] come up to the acadmey
+[IRC] [D3n3r0] [MC] Dracozorack: come up to the acadmey 
+[IRC] [turt2live] 13Test
+[MC] [ryandini77] ok
+[IRC] [D3n3r0] [MC] ryandini77: ok 
+[MC] [ryandini77] red ling cool
+[IRC] [D3n3r0] [MC] ryandini77: red ling cool 
+[MC] [ryandini77] lining*
+[IRC] [D3n3r0] [MC] ryandini77: lining* 
+[MC] [Dracozorack] thanks, it's gunna be the roof
+[IRC] [D3n3r0] [MC] Dracozorack: thanks, it's gunna be the roof 
+[MC] [ryandini77] cant u see im sitting here?
+[IRC] [D3n3r0] [MC] ryandini77: cant u see im sitting here? 
+[MC] [Dracozorack] this isn't your room
+[IRC] [D3n3r0] [MC] Dracozorack: this isn't your room 
+[MC] [Solani64] who wants to try the troll door maze? XD
+[IRC] [D3n3r0] [MC] Solani64: who wants to try the troll door maze? XD
+[MC] [Dracozorack] where's the wheat?
+[IRC] [D3n3r0] [MC] Dracozorack: where's the wheat? 
+[MC] [jasoni77] * Left Minecraft
+[IRC] [D3n3r0] [MC] [jasoni77 leaves the game ]
+[MC] [ryandini77] * Left Minecraft
+[IRC] [D3n3r0] [MC] [ryandini77 leaves the game ]
+[MC] [Dracozorack] oh
+[IRC] [D3n3r0] [MC] Dracozorack: oh 
+[MC] [ryandini77] * Joined Minecraft
+[IRC] [D3n3r0] [MC] [ryandini77 joins the game]
+[MC] [Dracozorack] thanks
+[IRC] [D3n3r0] [MC] Dracozorack: thanks 
+[MC] [Solani64] nvm it fails
+[IRC] [D3n3r0] [MC] Solani64: nvm it fails
+[MC] [jasoni77] * Joined Minecraft
+[IRC] [D3n3r0] [MC] [jasoni77 joins the game]
+[MC] [ryandini77] :O
+[IRC] [D3n3r0] [MC] ryandini77: :O 
+[MC] [Solani64] ?
+[IRC] [D3n3r0] [MC] Solani64: ?
+[MC] [Dracozorack] what?
+[IRC] [D3n3r0] [MC] Dracozorack: what? 
+[MC] [ryandini77] cool
+[IRC] [D3n3r0] [MC] ryandini77: cool 
+[MC] [Dracozorack] thanks
+[IRC] [D3n3r0] [MC] Dracozorack: thanks 
+[MC] [ryandini77] did he finish archer range>
+[IRC] [D3n3r0] [MC] ryandini77: did he finish archer range> 
+[MC] [Dracozorack] yeah
+[IRC] [D3n3r0] [MC] Dracozorack: yeah 
+[MC] [D3n3r0] * Joined Minecraft
+[IRC] [D3n3r0] [MC] [D3n3r0 joins the game]
+[MC] [Dracozorack] damnit
+[IRC] [D3n3r0] [MC] Dracozorack: damnit 
+[MC] [ryandini77] * Left Minecraft
+[IRC] [D3n3r0] [MC] [ryandini77 leaves the game ]
+[MC] [ryandini77] * Joined Minecraft
+[IRC] [D3n3r0] [MC] [ryandini77 joins the game]
+[MC] [ryandini77] missed :P
+[IRC] [D3n3r0] [MC] ryandini77: missed :P 
+[MC] [Dracozorack] the sign said construction in progress :L
+[IRC] [D3n3r0] [MC] Dracozorack: the sign said construction in progress :L 
+[MC] [ryandini77] :P
+[IRC] [D3n3r0] [MC] ryandini77: :P 
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [ryandini77] after i get stuff
+[IRC] [D3n3r0] [MC] ryandini77: after i get stuff 
+[IRC] [turt2live] 13inc spam
+[MC] [ryandini77] z?
+[IRC] [D3n3r0] [MC] ryandini77: z? 
+[IRC] [turt2live] 13xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[MC] [ryandini77] ...
+[IRC] [D3n3r0] [MC] ryandini77: ... 
+[MC] [ryandini77] macro
+[IRC] [D3n3r0] [MC] ryandini77: macro 
+[MC] [ryandini77] lol
+[IRC] [D3n3r0] [MC] ryandini77: lol 
+[MC] [ryandini77] shortened
+[IRC] [D3n3r0] [MC] ryandini77: shortened 
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[IRC] [D3n3r0] [MC] ryandini77: spam^ 
+[MC] [ryandini77] * Left Minecraft
+[IRC] [D3n3r0] [MC] [ryandini77 leaves the game ]
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[IRC] [turt2live] 13xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[MC] [ragingalbino] wow really small npc ville
+[IRC] [D3n3r0] [MC] ragingalbino: wow really small npc ville 
+[MC] [ragingalbino] a house a farm and a well
+[IRC] [D3n3r0] [MC] ragingalbino: a house a farm and a well 
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: Sayshal
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Disconnected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [Gamergull] err what commands again? lol
+[MC] [Dracozorack] type /money pay
+[MC] [creepershooter] ummm ./money pay creepershooter 45
+[MC] [Gamergull] thanks
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [creepershooter] welcome
+[MC] [Gamergull] you can tell that I play vanilla MC too much
+[SERVER] setusername meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: turt2live_dev
+[mea] Client Connected: turt2live_dev
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] Client Connected: Solani64
+[mea] Client Connected: Solani64
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [Solani64] hi?
+[mea] [Solani64] hi?
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [turt2live] WOOT SPAM CENTRAL
+[mea] [turt2live] WOOT SPAM CENTRAL
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [Sayshal] SPAAAM
+[mea] [Sayshal] SPAAAM
+[mea] [Solani64] SPAM
+[mea] [Solani64] SPAM
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [Sayshal] Hey sol
+[mea] [Sayshal] Hey sol
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [Sayshal] Wasssup?
+[mea] [Sayshal] Wasssup?
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[mea] [NOTICE] Client meaChatClient is using a development build (b256) or meaCraft!
+[SERVER] setusername meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] [Sayshal] Its fking LATE O.o
+[mea] [Sayshal] Its fking LATE O.o
+[mea] [Solani64] i scrolled this window
+[mea] [Solani64] i scrolled this window
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[mea] [Solani64] meh not rly
+[mea] [Solani64] meh not rly
+[mea] [Sayshal] Yes it issss
+[mea] [Sayshal] Yes it issss
+[mea] [Solani64] 2 is late XD
+[mea] [Solani64] 2 is late XD
+[mea] [Sayshal] I ahve to do a persuasive speech on Thursday D':
+[mea] [Sayshal] I ahve to do a persuasive speech on Thursday D':
+[mea] [Sayshal] I hate talking infront of people..
+[mea] [Sayshal] I hate talking infront of people..
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[mea] [Solani64] about?
+[mea] [Solani64] about?
+[mea] [Sayshal] Mac vs PC XD
+[mea] [Sayshal] Mac vs PC XD
+[mea] [turt2live] I have to time speeches on thursday >.>
+[mea] [turt2live] I have to time speeches on thursday >.>
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[mea] [Solani64] lol
+[mea] [Sayshal] lol
+[mea] [Sayshal] gonna get 256 brb
+[mea] Client Disconnected: Sayshal
+[MC] [Solani64] gimme WE
+[mea] [turt2live] He doesn't know he can't :P
+[mea] Client Connected: Sayshal
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[MC] [Solani64] or come on
+[mea] [Sayshal] turt2live is it updated on sitE?
+[MC] [Solani64] someone
+[mea] [turt2live] You can't get dev
+[MC] [Solani64] i need a stack
+[mea] [turt2live] :P
+[mea] [Sayshal] >:O
+[mea] [Sayshal] brb I gotta go break something -.-
+[MC] [Solani64] y?
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[MC] [Solani64] wtf
+[mea] [turt2live] And yes the client is spamming you, not hte server :P
+[mea] [turt2live] Testing a block of code
+[MC] [Solani64] my torches wont place
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[MC] [Solani64] brb
+[MC] [Solani64] * Left Minecraft
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 256 is being ran compared to stable 255
+[mea] [Solani64] wth
+[mea] [Solani64] that was random
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 266 is being ran compared to stable 255
+[MC] [Solani64] one of u come on i have thing marked for WE
+[MC] [Solani64] need it stacked
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 266 is being ran compared to stable 255
+[mea] [Sayshal] well shit
+[MC] [Solani64] ?
+[mea] [Sayshal] that wall was made of cement..
+[mea] [meaChatClient] Ow
+[MC] [Solani64] ???
+[mea] [Sayshal] there goes a hunk of skin and I think i pooped a knuck;e
+[mea] [NOTICE] Client meaChatClient has a dev build! 266 is being ran compared to stable 255
+[mea] [meaChatClient] Should I try to add chat colors?
+[mea] [Sayshal] ahhh shity typing
+[mea] [Sayshal] YeSSS
+[mea] [Sayshal] ow
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [turt2live] I'm going to be right away :P
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] punch a wall
+[mea] [Sayshal] hard
+[mea] [Sayshal] twice
+[MC] [Solani64] oh... why
+[mea] [Sayshal] cement -.-
+[mea] [Sayshal] I got a lil mad
+[mea] [turt2live] at?
+[MC] [Solani64] a lil
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [Solani64] just a weeee bit
+[mea] [Sayshal] tatyanna, who else? -.-
+[mea] [turt2live] oh, the dev build has a space so your messages arn't raping the left side of the frame >.>
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] fix [name] to <name> : ?
+[mea] [Sayshal] it looks weird in game
+[mea] [turt2live] When I get to the config
+[mea] [Sayshal] kk
+[mea] [turt2live] First: Colors.
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] lemme test Denero 1 sec
+[MC] [D3n3r0] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [D3n3r0] Loading...
+[MC] [D3n3r0] Online.
+[mea] [turt2live] OH. All commands sent and recieved are logged clientside
+[mea] [turt2live] D3n, are you able to respond to this?
+[MC] [D3n3r0] Yes
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] D3n3r0 full control to turt2live
+[mea] [turt2live] What version number is the server for meaSuite
+[MC] [D3n3r0] Sayshal found; ignored.
+[mea] [turt2live] LOL
+[MC] [Solani64] XD
+[mea] [Sayshal] woooow
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [Solani64] anyone can use ur name on that
+[mea] [Sayshal] D3n3r0: x119gaFAT33
+[MC] [Solani64] FAT
+[MC] [D3n3r0] Correct code for disable. Ignored
+[mea] [Sayshal] >.>
+[mea] [turt2live] Thank you D3n
+[MC] [Solani64] LOL
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [D3n3r0] Please reduce chatspam
+[mea] [turt2live] No
+[MC] [D3n3r0] Calling finnbar15 ...
+[MC] [Solani64] wow XD
+[mea] [turt2live] O_o
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [D3n3r0] Call cancelled by Xavier
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [turt2live] est
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [turt2live_dev] egdg
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [finnbar15] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [finnbar15] There we go :)
+[MC] [finnbar15] turt?w
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [finnbar15] * Left Minecraft
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [turt2live_dev] dfgsdfg
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [turt2live_dev] dgdgdg
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[IRC] [turt2live] hygfgfhgfg
+[MC] [turt2live] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [turt2live] hjghjgjg
+[MC] [turt2live] * Left Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[IRC] [meaBot] * User quit: turt2live (Client Quit)
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [Vernonl] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [meaChatClient] Test
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] I'm the only one who gives a crap about Construction.
+[mea] [meaChatClient] COLORED CHAT :3
+[mea] [Solani64] lol im not gunna get WE am i XD
+[mea] [Sayshal] already done everything so im designing something sexy.
+[mea] [Sayshal] We'll see.
+[mea] [Sayshal] I'm on vacation until Friday, then i'm back.
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Solani64] lol oh uhmm cuz im too lazy to go to the bank can i pay u for a terria account XD
+[mea] [Sayshal] sure
+[mea] [Solani64] lol k
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] $9.99 plus tax :P
+[mea] [Sayshal] Lemme see how much it'd be on steam
+[mea] [meaChatClient] COLORED CHAT FTW
+[mea] [meaChatClient] WOOT
+[mea] [Solani64] yeah ill just give 15
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Solani64] i should start selling the wii games i dont play
+[mea] [turt2live_dev] O_o people get your message before you see it :P
+[mea] [Solani64] how u know?
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [turt2live_dev] 2 chat clients open
+[mea] [Solani64] why
+[mea] [turt2live_dev] 1 is test, 1 is stable
+[mea] [Solani64] i have 3 tabs and this -.-
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] What email are you hooked up to Terraria for?
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] Client Connected: T2L_DEV
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[IRC] [meaBot] * User quit: AndroUser (Quit: AndroIRC - Android IRC Client ( http://www.androirc.com ))
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [dead_gamer_12Q] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] noauth
+[SERVER] noauth
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [dead_gamer_12Q] * Left Minecraft
+[MC] [dead_gamer_12Q] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [dead_gamer_12Q] * Left Minecraft
+[MC] [dead_gamer_12Q] * Joined Minecraft
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] Disconnected by server. (Crash? Shutdown? Don't ask me...)
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: Sayshal
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [Sayshal] Hello
+[mea] [meaChatAdminOverride] hey
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [jpbenneke] hi
+[MC] [jpbenneke] hi
+[mea] Client Disconnected: meaChatClient
+[MC] [creepershooter] * Left Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [creepershooter] * Joined Minecraft
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [creepershooter] * Left Minecraft
+[MC] [creepershooter] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [creepershooter] * Left Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [creepershooter] * Joined Minecraft
+[MC] [sargeant55] * Left Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] Client Connected: meaChatAdminOverride
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [meaChatAdminOverride] Test
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [meaChatAdminOverride] Test
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [meaChatAdminOverride] Test
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [meaChatAdminOverride] Test
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [meaChatAdminOverride] test
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [creepershooter] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[IRC] [turt2live_] Test
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[IRC] [turt2live_] Test
+[MC] [creepershooter] * Left Minecraft
+[IRC] [turt2live_] asdsadsad
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[MC] [creepershooter] * Joined Minecraft
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[mea] [NOTICE] Client meaChatClient has a dev build! 268 is being ran compared to stable 255
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [creepershooter] * Joined Minecraft
+[SERVER] setusername meaChatClient
+[MOTD] Welcome to meaSuite Chat (mea.sayshal.com)
+[mea] Client Connected: meaChatClient
+[MC] [creepershooter] * Left Minecraft
+[IRC] [turt2live_] Test
+[IRC] [turt2live_] asjdlkashdjakshdajsdg
