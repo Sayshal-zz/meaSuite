@@ -45,7 +45,7 @@ public class ConfigWriter {
 			config.load();
 			if(config.getString("meaSuite.author") == null){
 				config.setProperty("meaSuite.author", "Travis Ralston : minecraft@turt2live.com");
-				config.setProperty("meaSuite.downloadDevVerisons", "false");
+				config.setProperty("meaSuite.downloadDevVersions", "false");
 				config.setProperty("meaSuite.prename", "meaSuite");
 				config.setProperty("meaSuite.colorVariable", "&");
 				config.setProperty("meaSuite.SQL.username", "meaCraft");
@@ -290,9 +290,27 @@ public class ConfigWriter {
 	public void checkForHook(){
 		Configuration config = plugin.getConfiguration();
 		config.load();
+		String defaults[][] = {
+				{"Guest", "&8"},
+				{"Memeber", "&e"},
+				{"Developer", "&a"},
+				{"Mod", "&1"},
+				{"Admin", "&c"},
+				{"Co-Owner", "&6"},
+				{"Owner", "&5"}
+		};
 		if(config.getString("meaHook.author") == null){
 			config.setProperty("meaHook.author", "Travis Ralston : minecraft@turt2live.com");
 			config.setProperty("meaHook.forceMeaEconomy", "false");
+			config.setProperty("meaHook.enableAdmins", "true");
+			//config.setProperty("meaHook.allowClientSideFormatting", "true"); //Force: true
+			config.setProperty("meaHook.formats.irc", "[&9^T&f] ^R <&9^P&f>: &e^M");
+			config.setProperty("meaHook.formats.minecraft", "[&5^T&f] ^R <&5^P&f>: &e^M");
+			config.setProperty("meaHook.formats.meaChat", "[&a^T&f] ^R <&a^P&f>: &e^M");
+			config.setProperty("meaHook.formats.rank", "[^RC^R&f]");
+			config.setProperty("meaHook.formats.showRanks", "true"); //If off, remove "double spaces" in frmt
+			config.setProperty("meaHook.colors.ranks", defaults);
+			config.setProperty("meaHook.enableAdmins", "true");
 			config.save();
 		}
 	}

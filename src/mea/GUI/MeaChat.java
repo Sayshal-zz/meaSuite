@@ -123,6 +123,12 @@ public class MeaChat extends JPanel {
 		add(usersOnline);
 		add(command);
 		
+		addToChat("[MC] This is a minecraft message");
+		addToChat("[IRC] This is an IRC message");
+		addToChat("[mea] This is a mea message");
+		addToChat("[CONSOLE] This is a console message");
+		addToChat("======================================");
+
 		loadListeners();
 	}
 

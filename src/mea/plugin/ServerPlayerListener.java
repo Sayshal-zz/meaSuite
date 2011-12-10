@@ -52,8 +52,9 @@ public class ServerPlayerListener extends PlayerListener{
 	
 	public void onPlayerJoin(PlayerJoinEvent event){
 		if(plugin.isEnabled()){
-			hook.onJoin(event.getPlayer(), "MC");
-			chat.message("[MC] ["+event.getPlayer().getName()+"] * Joined Minecraft");  // TODO: TEMP
+			hook.onJoin(event.getPlayer().getName(), "MC");
+			//Removed : MeaHook now handles this
+			//chat.message("[MC] ["+event.getPlayer().getName()+"] * Joined Minecraft");
 			MeaGreylister gl = new MeaGreylister(plugin);
 			if(event.getPlayer().hasPermission("meagl.apply")){
 				if(!event.getPlayer().hasPermission("meagl.exempt")){

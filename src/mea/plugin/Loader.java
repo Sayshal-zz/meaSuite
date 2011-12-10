@@ -97,7 +97,7 @@ public class Loader extends JavaPlugin{
 	    lottery.startup();
 		econ_api.iconomyCheck();
 		econ.startup();
-		flarf.startup();
+		//flarf.startup();
 		Configuration config = getConfiguration();
 		config.load();
 		irc.sendMinecraftToIRC(config.getBoolean("meaChat.irc.MinecraftToIRC", false));
@@ -131,7 +131,7 @@ public class Loader extends JavaPlugin{
 				while(true){
 						try {
 							boolean isDev = false;
-							if(getNode("downloadDevVersions").equalsIgnoreCase("true")){
+							if(getNode("meaSuite.downloadDevVersions").equalsIgnoreCase("true")){
 								isDev = true;
 							}
 							BufferedReader in = new BufferedReader(new InputStreamReader(new URL("http://68.148.10.71/mc/plugins/version.txt").openStream()));
@@ -451,6 +451,7 @@ public class Loader extends JavaPlugin{
 
 	public static String getNode(String node){
 		Configuration config = new Configuration(new File(System.getProperty("user.dir")+"/plugins/meaSuite/config.yml"));
+		//System.out.println(System.getProperty("user.dir")+"/plugins/meaSuite/config.yml");
 		config.load();
 		MeaLogger.log("Get node: "+node, new File(System.getProperty("user.dir")+"/plugins/meaSuite/meaLogger/log.txt"));
 		return config.getString(node);
