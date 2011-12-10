@@ -94,9 +94,7 @@ public class Loader extends JavaPlugin{
 	    meaHook.startup();
 	    lottery.startup();
 		econ_api.iconomyCheck();
-		if(!meaHook.economy){
-			econ.startup();
-		}
+		econ.startup();
 		Configuration config = getConfiguration();
 		config.load();
 		irc.sendMinecraftToIRC(config.getBoolean("meaChat.irc.MinecraftToIRC", false));
