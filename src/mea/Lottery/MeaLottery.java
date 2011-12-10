@@ -41,33 +41,10 @@ public class MeaLottery {
 		
 	}
 	
-	private Object getNode(String path){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getProperty("meaLottery."+path);
-	}
-	
-	private double getNodeAsDouble(String path){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getDouble("meaLottery."+path, 0);
-	}
-	
-	private int getNodeAsInt(String path){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getInt("meaLottery."+path, 0);
-	}
-	
-	private String getNodeAsString(String path){
+	@SuppressWarnings("unused")
+	private String getNode(String path){
 		Configuration config = plugin.getConfiguration();
 		config.load();
 		return config.getString("meaLottery."+path, null);
-	}
-	
-	private boolean getNodeAsBoolean(String path){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getBoolean("meaLottery."+path, false);
 	}
 }

@@ -27,6 +27,7 @@ import mea.Chat.MeaIRC;
 import mea.Economy.MeaEconomy;
 import mea.Economy.api.MeaEconomyAPI;
 import mea.External.Download;
+import mea.Flarf.MeaFlarf;
 import mea.Freezer.MeaFreezer;
 import mea.Greylister.MeaGreylister;
 import mea.Hook.MeaHook;
@@ -66,6 +67,7 @@ public class Loader extends JavaPlugin{
 	private MeaShop shop = new MeaShop(this);
 	private MeaLottery lottery = new MeaLottery(this);
 	private MeaLogger meaLog = new MeaLogger(this, this);
+	private MeaFlarf flarf = new MeaFlarf(this);
 	
 	private ConfigWriter configWriter;
 	
@@ -95,6 +97,7 @@ public class Loader extends JavaPlugin{
 	    lottery.startup();
 		econ_api.iconomyCheck();
 		econ.startup();
+		flarf.startup();
 		Configuration config = getConfiguration();
 		config.load();
 		irc.sendMinecraftToIRC(config.getBoolean("meaChat.irc.MinecraftToIRC", false));
@@ -386,6 +389,8 @@ public class Loader extends JavaPlugin{
 					//Handled by economy
 				}else if(lottery.isCommand(cmd, args)){
 					lottery.handleCommand(cmd, args, player);
+				}else if(flarf.isCommand(cmd, args)){
+					flarf.handleCommand(cmd, args, player);
 				}else if(cmd.equalsIgnoreCase("lag")){
 					if(sender.hasPermission("meaSuite.Goodies.lagCheck")){
 						sender.sendMessage(MultiFunction.getPre(plugin)+" The time it took to get this is how much lag you have.");
