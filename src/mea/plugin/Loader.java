@@ -84,7 +84,6 @@ public class Loader extends JavaPlugin{
 	    //Module start
 	    meaHook = new MeaHook(this, chat);
 		chat = new MeaChat(this);
-		irc = new MeaIRC(chat);
 		configWriter = new ConfigWriter(plugin);
 		meaLog.startup();
 		meaLog.log("["+plugin.getDescription().getFullName()+"] Loading!");
@@ -97,6 +96,7 @@ public class Loader extends JavaPlugin{
 	    lottery.startup();
 		econ_api.iconomyCheck();
 		econ.startup();
+		irc = new MeaIRC(chat, meaHook);
 		//flarf.startup();
 		Configuration config = getConfiguration();
 		config.load();
