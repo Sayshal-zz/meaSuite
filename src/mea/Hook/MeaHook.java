@@ -50,17 +50,18 @@ public class MeaHook {
 	}
 	
 	public void onJoin(String player, String source){
-		/* TODO:
-		 * 		Configurable fmt
-		 * 		Fuck it... adding now
-		 */
 		String format = "^T ^P (Error: SOURCE ERR)";
 		if(source.equalsIgnoreCase("mc")){
-			format = "[MC] [^P]: ^m";
+			format = getNode("formats.minecraft");
 		}else if(source.equalsIgnoreCase("irc")){
-			format = "[IRC] [^P]: ^m";
+			format = getNode("formats.irc");
 		}else if(source.equalsIgnoreCase("mea")){
-			format = "[mea] [^P]: ^m";
+			format = getNode("formats.meaChat");
+		}
+		if(getNode("formats.showRanks").equalsIgnoreCase("true")){
+			
+		}else{
+			format.replaceAll("  ", " ");
 		}
 	}
 	
@@ -68,7 +69,15 @@ public class MeaHook {
 		
 	}
 	
+	public void onLeave(String player, String source, boolean kicked, String kickmessage){
+		
+	}
+	
 	public void onMessage(Player player, String source, String message){
+		
+	}
+	
+	public void onMessage(String player, String source, String message){
 		
 	}
 	
