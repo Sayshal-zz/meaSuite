@@ -250,17 +250,13 @@ public class MeaFreezer {
 	}
 
 	public String getNode(String node){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaFreeze."+node);
+		return plugin.getConfig().getString("meaFreeze."+node);
 	}
 	
 
 	public void setNode(String node, String value){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		config.setProperty("meaFreeze."+node, value);
-		config.save();
+		plugin.getConfig().set("meaFreeze."+node, value);
+		plugin.saveConfig();
 	}
 	
 	public void createDome(Location location, Configuration config){
@@ -319,29 +315,23 @@ public class MeaFreezer {
 	}
 	
 	public boolean isEnabled(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaFreeze.enabled").equalsIgnoreCase("TRUE");
+		return plugin.getConfig().getString("meaFreeze.enabled").equalsIgnoreCase("TRUE");
 	}
 	
 	public void enable(Player player){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		config.setProperty("meaFreeze.enabled", "true");
+		plugin.getConfig().set("meaFreeze.enabled", "true");
 		if(player != null){
 			player.sendMessage(convertVariables(getNode("onEnable"), player, "freeze"));
 		}
-		config.save();
+		plugin.saveConfig();
 	}
 
 	public void disable(Player player){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		config.setProperty("meaFreeze.enabled", "false");
+		plugin.getConfig().set("meaFreeze.enabled", "false");
 		if(player != null){
 			player.sendMessage(convertVariables(getNode("onDisable"), player, "freeze"));
 		}
-		config.save();
+		plugin.saveConfig();
 	}
 	
 	public String getProperty(Player player, String node){

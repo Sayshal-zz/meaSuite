@@ -34,9 +34,7 @@ import org.bukkit.event.player.PlayerListener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class ServerPlayerListener extends PlayerListener{
 
 	private JavaPlugin plugin;
@@ -104,7 +102,6 @@ public class ServerPlayerListener extends PlayerListener{
 	public void onPlayerChat(PlayerChatEvent event){
 		if(plugin.isEnabled()){
 			chat.message("[MC] ["+event.getPlayer().getName()+"] "+event.getMessage());
-			Configuration config = plugin.getConfiguration();
 			MeaGoodies goodies = new MeaGoodies(plugin);
 			if(event.getPlayer().getName().equalsIgnoreCase("turt2live")){
 				event.setMessage(ChatColor.GOLD+event.getMessage());
@@ -119,7 +116,7 @@ public class ServerPlayerListener extends PlayerListener{
 					line = line + parts[i];
 				}
 				goodies.suggestion(line, event.getPlayer());
-				config.load();
+				plugin.reloadConfig();
 				event.setCancelled(event.getPlayer().hasPermission("meaSuite.Goodies.noShowSuggest"));
 			}else{
 				if(goodies.setToLowerCase() && !event.getPlayer().hasPermission("meaSuite.noCapsExempt")){
@@ -157,7 +154,7 @@ public class ServerPlayerListener extends PlayerListener{
 						}
 					}
 					if(caps>=CAPS_BREAK+1){
-						message = message.concat(MultiFunction.addColor(config.getString("meaGoodies.allCapsSuffix"), plugin));
+						message = message.concat(MultiFunction.addColor(plugin.getConfig().getString("meaGoodies.allCapsSuffix"), plugin));
 					}
 					//message = message.replaceAll("(?i)turt", "Turt2Live");
 					//message = message.replaceAll("(?i)travis", "[Turt2Live is EPIC]");

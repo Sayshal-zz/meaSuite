@@ -12,9 +12,7 @@ import mea.plugin.MultiFunction;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class MeaGoodies {
 	
 	private JavaPlugin plugin;
@@ -24,26 +22,25 @@ public class MeaGoodies {
 	}
 	
 	public void suggestion(String line, Player player){
-	    Configuration config = plugin.getConfiguration();
 	    if(line.replaceAll(" ", "").length()<=8){
-	    	String message = config.getString("meaGoodies.messages.onNoSuggestion");
+	    	String message = plugin.getConfig().getString("meaGoodies.messages.onNoSuggestion");
 			if(!message.equalsIgnoreCase("nomsg")){
 				player.sendMessage(MultiFunction.getPre(plugin) + " " + MultiFunction.addColor(message, plugin));
 			}
 	    }else{
 			try{
 				BufferedWriter out = new BufferedWriter(new FileWriter(new File(plugin.getDataFolder()+"/meaGoodies/suggestions.txt"), true));
-				DateFormat dateFormat = new SimpleDateFormat(config.getString("meaGoodies.timeFormat"));
+				DateFormat dateFormat = new SimpleDateFormat(plugin.getConfig().getString("meaGoodies.timeFormat"));
 			    Date date = new Date();
 			    String timestamp = dateFormat.format(date);
-			    if(config.getString("meaGoodies.wrapSuggestionInQuotes").equalsIgnoreCase("true")){
+			    if(plugin.getConfig().getString("meaGoodies.wrapSuggestionInQuotes").equalsIgnoreCase("true")){
 			    	line = "\""+line+"\"";
 			    }
-			    String message = config.getString("meaGoodies.suggestionFormat").replaceAll("%PLAYER%", player.getName()).replaceAll("%SUGGESTION%", line).replaceAll("%TIMESTAMP%", timestamp);
+			    String message = plugin.getConfig().getString("meaGoodies.suggestionFormat").replaceAll("%PLAYER%", player.getName()).replaceAll("%SUGGESTION%", line).replaceAll("%TIMESTAMP%", timestamp);
 				out.write(message+"\r\n");
 				out.close();
-				config.load();
-				message = config.getString("meaGoodies.messages.onSuggestion");
+				plugin.reloadConfig();
+				message = plugin.getConfig().getString("meaGoodies.messages.onSuggestion");
 				if(!message.equalsIgnoreCase("nomsg")){
 					player.sendMessage(MultiFunction.getPre(plugin) + " " + MultiFunction.addColor(message, plugin));
 				}
@@ -55,9 +52,7 @@ public class MeaGoodies {
 	}
 	
 	public boolean setToLowerCase(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaGoodies.noCaps").equalsIgnoreCase("true");
+		return plugin.getConfig().getString("meaGoodies.noCaps").equalsIgnoreCase("true");
 	}
 	
 }

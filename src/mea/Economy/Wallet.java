@@ -129,9 +129,7 @@ public class Wallet {
 	}
 	
 	public void logTransaction(Player player, double newBalance, String type){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaEconomy.logToFile").equalsIgnoreCase("true")){
+		if(plugin.getConfig().getString("meaEconomy.logToFile").equalsIgnoreCase("true")){
 			try{
 				BufferedWriter out = new BufferedWriter(new FileWriter(new File(this.plugin.getDataFolder()+"/meaEconomy/logs/transactions.txt"), true));
 				out.write("["+getTimestamp()+"] Player "+player.getName()+" now has "+getBalanceAsString(newBalance)+" because of "+type+"\r\n");

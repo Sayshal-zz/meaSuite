@@ -11,10 +11,8 @@ import mea.plugin.MultiFunction;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 import org.jibble.pircbot.Colors;
 
-@SuppressWarnings("deprecation")
 public class MeaChat {
 	
 	private JavaPlugin plugin;
@@ -94,9 +92,7 @@ public class MeaChat {
 	}
 	
 	public String getIRCNode(String node){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaChat.irc."+node);
+		return plugin.getConfig().getString("meaChat.irc."+node);
 	}
 	
 	public void disable(){

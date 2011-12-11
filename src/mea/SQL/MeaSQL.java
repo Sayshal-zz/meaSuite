@@ -24,12 +24,10 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 
-@SuppressWarnings("deprecation")
 public class MeaSQL {
 
 	private JavaPlugin plugin;
@@ -67,13 +65,11 @@ public class MeaSQL {
 	
 	public void modifyDataQuery(String query){
 		String sql_username = "", sql_password = "", sql_host = "", sql_port = "", sql_database = "";
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		sql_username = config.getString("meaSuite.SQL.username");
-		sql_password = config.getString("meaSuite.SQL.password");
-		sql_host = config.getString("meaSuite.SQL.host");
-		sql_database = config.getString("meaSuite.SQL.database");
-		sql_port = config.getString("meaSuite.SQL.port");
+		sql_username = plugin.getConfig().getString("meaSuite.SQL.username");
+		sql_password = plugin.getConfig().getString("meaSuite.SQL.password");
+		sql_host = plugin.getConfig().getString("meaSuite.SQL.host");
+		sql_database = plugin.getConfig().getString("meaSuite.SQL.database");
+		sql_port = plugin.getConfig().getString("meaSuite.SQL.port");
 		Connection connection = null;
 		Properties properties = new Properties();
 		properties.put("user", sql_username);
@@ -106,13 +102,11 @@ public class MeaSQL {
 			return null;
 		}
 		String sql_username = "", sql_password = "", sql_host = "", sql_port = "", sql_database = "";
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		sql_username = config.getString("meaSuite.SQL.username");
-		sql_password = config.getString("meaSuite.SQL.password");
-		sql_host = config.getString("meaSuite.SQL.host");
-		sql_database = config.getString("meaSuite.SQL.database");
-		sql_port = config.getString("meaSuite.SQL.port");
+		sql_username = plugin.getConfig().getString("meaSuite.SQL.username");
+		sql_password = plugin.getConfig().getString("meaSuite.SQL.password");
+		sql_host = plugin.getConfig().getString("meaSuite.SQL.host");
+		sql_database = plugin.getConfig().getString("meaSuite.SQL.database");
+		sql_port = plugin.getConfig().getString("meaSuite.SQL.port");
 		Connection connection = null;
 		Properties properties = new Properties();
 		properties.put("user", sql_username);

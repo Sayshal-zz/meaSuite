@@ -745,8 +745,7 @@ public class MeaShop {
 	}
 	
 	private String getNode(String node) {
-		Configuration config = plugin.getConfiguration();
-		return config.getString("meaShop."+node);
+		return plugin.getConfig().getString("meaShop."+node);
 	}
 	
 	public String getMessage(String node){
@@ -760,29 +759,23 @@ public class MeaShop {
 	}
 	
 	public void enable(Player player){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		config.setProperty("meaShop.enabled", "true");
-		config.save();
+		plugin.getConfig().set("meaShop.enabled", "true");
+		plugin.saveConfig();
 		if(player != null){
 			player.sendMessage(MultiFunction.getPre(plugin)+" "+MultiFunction.addColor(getMessage("onEnable"), plugin));
 		}
 	}
 	
 	public void disable(Player player){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		config.setProperty("meaShop.enabled", "false");
-		config.save();
+		plugin.getConfig().set("meaShop.enabled", "false");
+		plugin.saveConfig();
 		if(player != null){
 			player.sendMessage(MultiFunction.getPre(plugin)+" "+MultiFunction.addColor(getMessage("onDisable"), plugin));
 		}
 	}
 	
 	public boolean isEnabled(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaShop.enabled").equalsIgnoreCase("true");
+		return plugin.getConfig().getString("meaShop.enabled").equalsIgnoreCase("true");
 	}
 	
 	public void log(String message){

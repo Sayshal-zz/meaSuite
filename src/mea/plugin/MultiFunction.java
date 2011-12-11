@@ -32,9 +32,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Sheep;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class MultiFunction {
 
 	public static String merge(String array[], int startAt){
@@ -46,9 +44,7 @@ public class MultiFunction {
 	}
 	
 	public static String addColor(String message, JavaPlugin plugin){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		String colorSeperator = config.getString("meaSuite.colorVariable");
+		String colorSeperator = plugin.getConfig().getString("meaSuite.colorVariable");
 		message = message.replaceAll(colorSeperator+"0", ChatColor.getByCode(0x0).toString());
 		message = message.replaceAll(colorSeperator+"1", ChatColor.getByCode(0x1).toString());
 		message = message.replaceAll(colorSeperator+"2", ChatColor.getByCode(0x2).toString());
@@ -98,9 +94,7 @@ public class MultiFunction {
 	}
 	
 	public static String getPre(JavaPlugin plugin){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		String name = addColor(config.getString("meaSuite.prename"), plugin);
+		String name = addColor(plugin.getConfig().getString("meaSuite.prename"), plugin);
 		return name;
 	}
 	

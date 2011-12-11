@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class MeaStringFormat {
 	
+	@SuppressWarnings("unused")
 	private JavaPlugin plugin;
 	
 	public MeaStringFormat(JavaPlugin plugin){

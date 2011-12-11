@@ -31,9 +31,7 @@ import mea.plugin.MultiFunction;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class MeaEconomy {
 	
 	private JavaPlugin plugin;
@@ -149,9 +147,7 @@ public class MeaEconomy {
 	}
 	
 	public String getNode(String node){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaEconomy."+node);
+		return plugin.getConfig().getString("meaEconomy."+node);
 	}
 	
 	private void top(Player sender){
@@ -242,13 +238,11 @@ public class MeaEconomy {
 	}
 	
 	private void interest(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
 		if(getNode("interestOnlineOnly").equalsIgnoreCase("true")){
 			Player online[] = Bukkit.getOnlinePlayers();
 			for(Player player : online){
 				Wallet wallet = new Wallet(plugin, player);
-				wallet.interest(config.getDouble("meaEconomy.interest", 0));
+				wallet.interest(plugin.getConfig().getDouble("meaEconomy.interest", 0));
 				if(!getNode("messages.onInterest").equalsIgnoreCase("nomsg")){
 					player.sendMessage(MultiFunction.getPre(plugin)+" "+MultiFunction.addColor(getNode("messages.onInterest").replaceAll("%RATE%", getNode("interest")+"%").replaceAll("%BALANCE%", wallet.getBalanceAsString()), plugin));
 				}
@@ -259,19 +253,17 @@ public class MeaEconomy {
 				String name = file.getName().replaceAll("\\.yml", "");
 				Player player = Bukkit.getPlayer(name);
 				Wallet wallet = new Wallet(plugin, player);
-				wallet.interest(config.getDouble("meaEconomy.interest", 0));
+				wallet.interest(plugin.getConfig().getDouble("meaEconomy.interest", 0));
 			}
 		}
 	}
 	
 	private void tax(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
 		if(getNode("taxOnlineOnly").equalsIgnoreCase("true")){
 			Player online[] = Bukkit.getOnlinePlayers();
 			for(Player player : online){
 				Wallet wallet = new Wallet(plugin, player);
-				wallet.tax(config.getDouble("meaEconomy.tax", 0));
+				wallet.tax(plugin.getConfig().getDouble("meaEconomy.tax", 0));
 				if(!getNode("messages.onTax").equalsIgnoreCase("nomsg")){
 					player.sendMessage(MultiFunction.getPre(plugin)+" "+MultiFunction.addColor(getNode("messages.onTax").replaceAll("%RATE%", getNode("tax")+"%").replaceAll("%BALANCE%", wallet.getBalanceAsString()), plugin));
 				}
@@ -282,7 +274,7 @@ public class MeaEconomy {
 				String name = file.getName().replaceAll("\\.yml", "");
 				Player player = Bukkit.getPlayer(name);
 				Wallet wallet = new Wallet(plugin, player);
-				wallet.tax(config.getDouble("meaEconomy.tax", 0));
+				wallet.tax(plugin.getConfig().getDouble("meaEconomy.tax", 0));
 			}
 		}
 	}

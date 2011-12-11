@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.util.HashMap;
-import java.util.Set;
 import java.util.Vector;
 
 import org.bukkit.Bukkit;

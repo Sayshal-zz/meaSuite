@@ -2,9 +2,7 @@ package mea.Lottery;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class MeaLottery {
 	
 	private JavaPlugin plugin;
@@ -43,8 +41,6 @@ public class MeaLottery {
 	
 	@SuppressWarnings("unused")
 	private String getNode(String path){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaLottery."+path, null);
+		return plugin.getConfig().getString("meaLottery."+path, null);
 	}
 }

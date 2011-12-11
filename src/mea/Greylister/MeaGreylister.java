@@ -34,28 +34,25 @@ public class MeaGreylister{
 	}
 	
 	public boolean isEnabled(){
-		Configuration config = plugin.getConfiguration();
-		return config.getString("meaGreylister.enabled").equalsIgnoreCase("TRUE");
+		return plugin.getConfig().getString("meaGreylister.enabled").equalsIgnoreCase("TRUE");
 	}
 	
 	public void enable(Player player){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		config.setProperty("meaGreylister.enabled", "true");
+		plugin.reloadConfig();
+		plugin.getConfig().set("meaGreylister.enabled", "true");
 		if(player != null){
 			player.sendMessage(convertVariables(getMessage("onEnable"), player, "apply"));
 		}
-		config.save();
+		plugin.saveConfig();
 	}
 	
 	public void disable(Player player){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		config.setProperty("meaGreylister.enabled", "false");
+		plugin.reloadConfig();
+		plugin.getConfig().set("meaGreylister.enabled", "false");
 		if(player != null){
 			player.sendMessage(convertVariables(getMessage("onDisable"), player, "apply"));
 		}
-		config.save();
+		plugin.saveConfig();
 	}
 
 	public void apply(Player player, String[] args) {
@@ -356,34 +353,30 @@ public class MeaGreylister{
 	}
 
 	private String getAdminVar(String variable) {
-		Configuration config = plugin.getConfiguration();
-		config.load();
+		plugin.reloadConfig();
 		String mess = "";
-		mess = config.getString("meaGreylister.adminView."+variable);
+		mess = plugin.getConfig().getString("meaGreylister.adminView."+variable);
 		return mess;
 	}
 
 	private String getAcceptVar(String variable) {
-		Configuration config = plugin.getConfiguration();
-		config.load();
+		plugin.reloadConfig();
 		String mess = "";
-		mess = config.getString("meaGreylister.onAcceptCommads."+variable);
+		mess = plugin.getConfig().getString("meaGreylister.onAcceptCommads."+variable);
 		return mess;
 	}
 
 	private String getDeclineVar(String variable) {
-		Configuration config = plugin.getConfiguration();
-		config.load();
+		plugin.reloadConfig();
 		String mess = "";
-		mess = config.getString("meaGreylister.onDeclineCommads."+variable);
+		mess = plugin.getConfig().getString("meaGreylister.onDeclineCommads."+variable);
 		return mess;
 	}
 
 	public String getMessage(String configHeader){
-		Configuration config = plugin.getConfiguration();
-		config.load();
+		plugin.reloadConfig();
 		String mess = "";
-		mess = config.getString("meaGreylister.messages."+configHeader);
+		mess = plugin.getConfig().getString("meaGreylister.messages."+configHeader);
 		return mess;
 	}
 }

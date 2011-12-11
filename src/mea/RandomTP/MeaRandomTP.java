@@ -14,9 +14,7 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class MeaRandomTP {
 	
 	private JavaPlugin plugin;
@@ -31,8 +29,7 @@ public class MeaRandomTP {
 	}
 	
 	private boolean isEnabled(){
-		Configuration config = plugin.getConfiguration();
-		return config.getString("meaRandomTP.enabled").equalsIgnoreCase("true");
+		return plugin.getConfig().getString("meaRandomTP.enabled").equalsIgnoreCase("true");
 	}
 	
 	public void tp(Player player){
@@ -138,23 +135,20 @@ public class MeaRandomTP {
 	}
 
 	private String getNode(String message) {
-		Configuration config = plugin.getConfiguration();
-		return MultiFunction.addColor(config.getString("meaRandomTP."+message), plugin);
+		return MultiFunction.addColor(plugin.getConfig().getString("meaRandomTP."+message), plugin);
 	}
 	
 	public void enable(Player player){
 		if(!getNode("onEnable").equalsIgnoreCase("nomsg")){
 			player.sendMessage(getNode("onEnable"));
 		}
-		Configuration config = plugin.getConfiguration();
-		config.setProperty("meaRandomTP.enabled", "true");
+		plugin.getConfig().set("meaRandomTP.enabled", "true");
 	}
 	
 	public void disable(Player player){
 		if(!getNode("onDisable").equalsIgnoreCase("nomsg")){
 			player.sendMessage(getNode("onDisable"));
 		}
-		Configuration config = plugin.getConfiguration();
-		config.setProperty("meaRandomTP.enabled", "false");
+		plugin.getConfig().set("meaRandomTP.enabled", "false");
 	}
 }

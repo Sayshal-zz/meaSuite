@@ -140,9 +140,7 @@ public class MeaEconomyAPI {
 	}
 	
 	public void onLogin(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		String message = config.getString("meaEconomy.messages.onLoginBalance");
+		String message = plugin.getConfig().getString("meaEconomy.messages.onLoginBalance");
 		if(!message.equalsIgnoreCase("nomsg")){
 			message = MultiFunction.addColor(message.replaceAll("%PLAYER%", player.getName()).replaceAll("%BALANCE%", getBalanceAsString()), plugin);
 			player.sendMessage(message);
@@ -187,19 +185,17 @@ public class MeaEconomyAPI {
 	}
 	
 	public void iconomyCheck(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaEconomy.convertIconomy").equalsIgnoreCase("true")){
+		if(plugin.getConfig().getString("meaEconomy.convertIconomy").equalsIgnoreCase("true")){
 			System.out.println("Converting iConomy!");
-			String host = config.getString("meaEconomy.iconomy.host");
-			String port = config.getString("meaEconomy.iconomy.port");
-			String user = config.getString("meaEconomy.iconomy.user");
-			String pass = config.getString("meaEconomy.iconomy.pass");
-			String db = config.getString("meaEconomy.iconomy.database");
-			String table = config.getString("meaEconomy.iconomy.table");
+			String host = plugin.getConfig().getString("meaEconomy.iconomy.host");
+			String port = plugin.getConfig().getString("meaEconomy.iconomy.port");
+			String user = plugin.getConfig().getString("meaEconomy.iconomy.user");
+			String pass = plugin.getConfig().getString("meaEconomy.iconomy.pass");
+			String db = plugin.getConfig().getString("meaEconomy.iconomy.database");
+			String table = plugin.getConfig().getString("meaEconomy.iconomy.table");
 			convertIconomy(host, port, user, pass, db, table);
-			config.setProperty("meaEconomy.convertIconomy", "false");
-			config.save();
+			plugin.getConfig().set("meaEconomy.convertIconomy", "false");
+			plugin.saveConfig();
 		}
 	}
 }

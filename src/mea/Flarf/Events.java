@@ -10,7 +10,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Events {
 
+	@SuppressWarnings("unused")
 	private JavaPlugin plugin;
+	@SuppressWarnings("unused")
 	private File currentgames[];
 	
 	public Events(JavaPlugin plugin, File[] currentgames){

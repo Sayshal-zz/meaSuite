@@ -16,14 +16,13 @@
 package mea.plugin;
 
 import java.io.File;
-import java.util.Arrays;
+import java.io.IOException;
 
+import mea.Logger.MeaLogger;
 import mea.Shop.MeaShop;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class ConfigWriter {
 	
 	private JavaPlugin plugin;
@@ -33,160 +32,158 @@ public class ConfigWriter {
 	}
 	
 	public void reload(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
+		plugin.reloadConfig();
 	}
 	
 	public void write(){
-		File d = plugin.getDataFolder();
-		d.mkdirs();
-		File f2 = new File(plugin.getDataFolder()+"/config.yml");
-		if(!f2.exists()){
-			Configuration config = plugin.getConfiguration();
-			config.load();
-			if(config.getString("meaSuite.author") == null){
-				config.setProperty("meaSuite.author", "Travis Ralston : minecraft@turt2live.com");
-				config.setProperty("meaSuite.downloadDevVersions", "false");
-				config.setProperty("meaSuite.prename", "meaSuite");
-				config.setProperty("meaSuite.colorVariable", "&");
-				config.setProperty("meaSuite.SQL.username", "meaCraft");
-				config.setProperty("meaSuite.SQL.password", "meaCraft");
-				config.setProperty("meaSuite.SQL.host", "localhost");
-				config.setProperty("meaSuite.SQL.port", "3306");
-				config.setProperty("meaSuite.SQL.database", "meaSuite");
-				config.save();
+		try{
+			File d = plugin.getDataFolder();
+			d.mkdirs();
+			File f2 = new File(plugin.getDataFolder()+"/plugin.getConfig().yml");
+			if(!f2.exists()){
+				f2.createNewFile();
+				if(plugin.getConfig().getString("meaSuite.author") == null){
+					plugin.getConfig().set("meaSuite.author", "Travis Ralston : minecraft@turt2live.com");
+					plugin.getConfig().set("meaSuite.downloadDevVersions", "false");
+					plugin.getConfig().set("meaSuite.prename", "meaSuite");
+					plugin.getConfig().set("meaSuite.colorVariable", "&");
+					plugin.getConfig().set("meaSuite.SQL.username", "meaCraft");
+					plugin.getConfig().set("meaSuite.SQL.password", "meaCraft");
+					plugin.getConfig().set("meaSuite.SQL.host", "localhost");
+					plugin.getConfig().set("meaSuite.SQL.port", "3306");
+					plugin.getConfig().set("meaSuite.SQL.database", "meaSuite");
+					plugin.saveConfig();
+				}
 			}
+			d = new File(plugin.getDataFolder()+"/meaGreylister/applications");
+			d.mkdirs();
+			checkForGreylister();
+			d = new File(plugin.getDataFolder()+"/meaFreeze/frozen_players");
+			d.mkdirs();
+			checkForFreeze();
+			d = new File(plugin.getDataFolder()+"/meaShop/logs");
+			d.mkdirs();
+			d = new File(plugin.getDataFolder()+"/meaShop/player_information");
+			d.mkdirs();
+			checkForShop();
+			d = new File(plugin.getDataFolder()+"/meaEconomy/logs");
+			d.mkdirs();
+			d = new File(plugin.getDataFolder()+"/meaEconomy/player_information");
+			d.mkdirs();
+			checkForEconomy();
+			//d = new File(plugin.getDataFolder()+"/RandomTP");
+			//d.mkdirs();
+			checkForRandomTP();
+			d = new File(plugin.getDataFolder()+"/meaChat/player_information");
+			d.mkdirs();
+			checkForChat();
+			d = new File(plugin.getDataFolder()+"/meaGoodies");
+			d.mkdirs();
+			checkForGoodies();
+			d = new File(plugin.getDataFolder()+"/meaHook");
+			d.mkdirs();
+			checkForHook();
+			d = new File(plugin.getDataFolder()+"/meaLottery");
+			d.mkdirs();
+			checkForLottery();
+			d = new File(plugin.getDataFolder()+"/meaLogger");
+			d.mkdirs();
+			d = new File(plugin.getDataFolder()+"/meaLogger/temp");
+			d.mkdirs();
+			d = new File(plugin.getDataFolder()+"/meaLogger/old_logs");
+			d.mkdirs();
+			checkForLogger();
+		}catch (Exception e){
+			e.printStackTrace();
+			MeaLogger.log(e.getMessage(), new File(plugin.getDataFolder()+"/meaLogger/log.txt"));
 		}
-		d = new File(plugin.getDataFolder()+"/meaGreylister/applications");
-		d.mkdirs();
-		checkForGreylister();
-		d = new File(plugin.getDataFolder()+"/meaFreeze/frozen_players");
-		d.mkdirs();
-		checkForFreeze();
-		d = new File(plugin.getDataFolder()+"/meaShop/logs");
-		d.mkdirs();
-		d = new File(plugin.getDataFolder()+"/meaShop/player_information");
-		d.mkdirs();
-		checkForShop();
-		d = new File(plugin.getDataFolder()+"/meaEconomy/logs");
-		d.mkdirs();
-		d = new File(plugin.getDataFolder()+"/meaEconomy/player_information");
-		d.mkdirs();
-		checkForEconomy();
-		//d = new File(plugin.getDataFolder()+"/RandomTP");
-		//d.mkdirs();
-		checkForRandomTP();
-		d = new File(plugin.getDataFolder()+"/meaChat/player_information");
-		d.mkdirs();
-		checkForChat();
-		d = new File(plugin.getDataFolder()+"/meaGoodies");
-		d.mkdirs();
-		checkForGoodies();
-		d = new File(plugin.getDataFolder()+"/meaHook");
-		d.mkdirs();
-		checkForHook();
-		d = new File(plugin.getDataFolder()+"/meaLottery");
-		d.mkdirs();
-		checkForLottery();
-		d = new File(plugin.getDataFolder()+"/meaLogger");
-		d.mkdirs();
-		d = new File(plugin.getDataFolder()+"/meaLogger/temp");
-		d.mkdirs();
-		d = new File(plugin.getDataFolder()+"/meaLogger/old_logs");
-		d.mkdirs();
-		checkForLogger();
+		reload();
 	}
 	
-	public void checkForGreylister(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaGreylister.author") == null){
-			config.setProperty("meaGreylister.messages.onApplySent", "Your app was sent");
-			config.setProperty("meaGreylister.messages.onApplyHave", "Your app was already sent");
-			config.setProperty("meaGreylister.messages.onApplyExempt", "You are exempt");
-			config.setProperty("meaGreylister.messages.onGuestJoin", "Welcome guest!");
-			config.setProperty("meaGreylister.messages.onApplicantJoin", "Welcome applicant!");
-			config.setProperty("meaGreylister.messages.onApplyError", "Nice try :)");
-			config.setProperty("meaGreylister.messages.onAppError", "Nice try :)");
-			config.setProperty("meaGreylister.messages.onConsoleSend", "You must be in-game!");
-			config.setProperty("meaGreylister.messages.newApplication", "There is a new application from %PLAYER% (%NEWAPPS% applications)");
-			//config.setProperty("meaGreylister.messages.colorVariable", "&");
-			config.setProperty("meaGreylister.messages.notEnoughArgs", "You must supply enough arguments: %HELPMENU%");
-			config.setProperty("meaGreylister.messages.onEnable", "meaGreylister enabled!");
-			config.setProperty("meaGreylister.messages.onDisable", "meaGreylister disabled!");
-			config.setProperty("meaGreylister.onAcceptCommads.command1", "perm global addgroup Default %PLAYER%");
-			config.setProperty("meaGreylister.onAcceptCommads.command2", "perm global rmgroup Guest %PLAYER%");
-			config.setProperty("meaGreylister.onDeclineCommads.command1", "broadcast %PLAYER% fails!");
-			config.setProperty("meaGreylister.adminView.var1", "age");
-			config.setProperty("meaGreylister.adminView.var2", "rules");
-			config.setProperty("meaGreylister.adminView.var3", "message");
-			config.setProperty("meaGreylister.adminView.label1", "age");
-			config.setProperty("meaGreylister.adminView.label2", "rules");
-			config.setProperty("meaGreylister.adminView.label3", "message");
-			config.setProperty("meaGreylister.adminView.return1", "Age: %age%");
-			config.setProperty("meaGreylister.adminView.return2", "Rules: %rules%");
-			config.setProperty("meaGreylister.adminView.return3", "Message: %message%");
-			config.setProperty("meaGreylister.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaGreylister.enabled", "true");
-			config.save();
-		}
-	}
-	
-	public void checkForFreeze(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaFreeze.author") == null){
-			//config.setProperty("meaFreeze.messages.colorVariable", "&");
-			config.setProperty("meaFreeze.messages.notEnoughArgs", "You must supply enough arguments: %HELPMENU%");
-			config.setProperty("meaFreeze.messages.onEnable", "meaFreeze enabled!");
-			config.setProperty("meaFreeze.messages.onDisable", "meaFreeze disabled!");
-			config.setProperty("meaFreeze.messages.onFreeze", "You are frozen!");
-			config.setProperty("meaFreeze.messages.onUnfreeze", "You are free!");
-			config.setProperty("meaFreeze.messages.onCodeFreeze", "You are frozen! Type /code %CODE% to unfreeze!");
-			config.setProperty("meaFreeze.messages.onFreezeCommand", "nocmd");
-			config.setProperty("meaFreeze.messages.onUnfreezeCommand", "nocmd");
-			config.setProperty("meaFreeze.messages.notFrozen", "%PLAYER% is not frozen!");
-			config.setProperty("meaFreeze.messages.freezeInfo.line1", "Frozen By: %WHOFROZE%");
-			config.setProperty("meaFreeze.messages.freezeInfo.line2", "Frozen Until: %FROZENUNTIL%");
-			config.setProperty("meaFreeze.messages.freezeInfo.line3", "Code Frozen: %CODEFROZEN%");
-			config.setProperty("meaFreeze.messages.freezeInfo.line4", "Frozen On: %FROZENON%");
-			config.setProperty("meaFreeze.messages.onFrozenLogin", "You are frozen until %FROZENUNTIL%");
-			config.setProperty("meaFreeze.messages.onExempt", "%PLAYER% is exempt!");
-			config.setProperty("meaFreeze.timestamp.format", "dd/MMM/YYYY @ hh:mm:ss z");
-			config.setProperty("meaFreeze.code.characters", "abcdefghijklmnopqrstuvwxyz0123456789");
-			config.setProperty("meaFreeze.code.randomUppercase", "true");
-			config.setProperty("meaFreeze.code.length", "8");
-			config.setProperty("meaFreeze.settings.lagReduction", "false");
-			config.setProperty("meaFreeze.settings.iceDome", "true");
-			config.setProperty("meaFreeze.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaFreeze.enabled", "true");
-			config.save();
+	public void checkForGreylister() throws IOException{
+		if(plugin.getConfig().getString("meaGreylister.author") == null){
+			plugin.getConfig().set("meaGreylister.messages.onApplySent", "Your app was sent");
+			plugin.getConfig().set("meaGreylister.messages.onApplyHave", "Your app was already sent");
+			plugin.getConfig().set("meaGreylister.messages.onApplyExempt", "You are exempt");
+			plugin.getConfig().set("meaGreylister.messages.onGuestJoin", "Welcome guest!");
+			plugin.getConfig().set("meaGreylister.messages.onApplicantJoin", "Welcome applicant!");
+			plugin.getConfig().set("meaGreylister.messages.onApplyError", "Nice try :)");
+			plugin.getConfig().set("meaGreylister.messages.onAppError", "Nice try :)");
+			plugin.getConfig().set("meaGreylister.messages.onConsoleSend", "You must be in-game!");
+			plugin.getConfig().set("meaGreylister.messages.newApplication", "There is a new application from %PLAYER% (%NEWAPPS% applications)");
+			//plugin.getConfig().set("meaGreylister.messages.colorVariable", "&");
+			plugin.getConfig().set("meaGreylister.messages.notEnoughArgs", "You must supply enough arguments: %HELPMENU%");
+			plugin.getConfig().set("meaGreylister.messages.onEnable", "meaGreylister enabled!");
+			plugin.getConfig().set("meaGreylister.messages.onDisable", "meaGreylister disabled!");
+			plugin.getConfig().set("meaGreylister.onAcceptCommads.command1", "perm global addgroup Default %PLAYER%");
+			plugin.getConfig().set("meaGreylister.onAcceptCommads.command2", "perm global rmgroup Guest %PLAYER%");
+			plugin.getConfig().set("meaGreylister.onDeclineCommads.command1", "broadcast %PLAYER% fails!");
+			plugin.getConfig().set("meaGreylister.adminView.var1", "age");
+			plugin.getConfig().set("meaGreylister.adminView.var2", "rules");
+			plugin.getConfig().set("meaGreylister.adminView.var3", "message");
+			plugin.getConfig().set("meaGreylister.adminView.label1", "age");
+			plugin.getConfig().set("meaGreylister.adminView.label2", "rules");
+			plugin.getConfig().set("meaGreylister.adminView.label3", "message");
+			plugin.getConfig().set("meaGreylister.adminView.return1", "Age: %age%");
+			plugin.getConfig().set("meaGreylister.adminView.return2", "Rules: %rules%");
+			plugin.getConfig().set("meaGreylister.adminView.return3", "Message: %message%");
+			plugin.getConfig().set("meaGreylister.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.getConfig().set("meaGreylister.enabled", "true");
+			plugin.saveConfig();
 		}
 	}
 	
-	public void checkForShop(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaShop.author") == null){
-			config.setProperty("meaShop.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaShop.defaultBuySellStackAmount", "1");
-			config.setProperty("meaShop.sellAllConfirmation", "true");
-			config.setProperty("meaShop.sellInventoryConfirmation", "false");
-			config.setProperty("meaShop.defaultLookupStackAmount", "1");
-			//config.setProperty("meaShop.messagesFile", "/meaShop/messages.yml");
-			//config.setProperty("meaShop.itemsFile", "/meaShop/items.yml");
-			//config.setProperty("meaShop.logFile", "/meaShop/logs/transactions.txt");
-			//config.setProperty("meaShop.messagesFile", "/meaShop/messages.yml");
-			//config.setProperty("meaShop.discountFile", "/meaShop/discounts.yml");
-			//config.setProperty("meaShop.pricesFile", "/meaShop/prices.csv");
-			config.setProperty("meaShop.globalMessages", "true");
-			config.setProperty("meaShop.giveMostAmount", "true");
-			config.setProperty("meaShop.logToFile", "true");
-			config.setProperty("meaShop.itemsPerPage", "10");
-			config.setProperty("meaShop.discounts", "true");
-			config.setProperty("meaShop.backupLogsOnLoad", "true");
-			config.setProperty("meaShop.enabled", "true");
-			config.save();
+	public void checkForFreeze() throws IOException{
+		if(plugin.getConfig().getString("meaFreeze.author") == null){
+			//plugin.getConfig().set("meaFreeze.messages.colorVariable", "&");
+			plugin.getConfig().set("meaFreeze.messages.notEnoughArgs", "You must supply enough arguments: %HELPMENU%");
+			plugin.getConfig().set("meaFreeze.messages.onEnable", "meaFreeze enabled!");
+			plugin.getConfig().set("meaFreeze.messages.onDisable", "meaFreeze disabled!");
+			plugin.getConfig().set("meaFreeze.messages.onFreeze", "You are frozen!");
+			plugin.getConfig().set("meaFreeze.messages.onUnfreeze", "You are free!");
+			plugin.getConfig().set("meaFreeze.messages.onCodeFreeze", "You are frozen! Type /code %CODE% to unfreeze!");
+			plugin.getConfig().set("meaFreeze.messages.onFreezeCommand", "nocmd");
+			plugin.getConfig().set("meaFreeze.messages.onUnfreezeCommand", "nocmd");
+			plugin.getConfig().set("meaFreeze.messages.notFrozen", "%PLAYER% is not frozen!");
+			plugin.getConfig().set("meaFreeze.messages.freezeInfo.line1", "Frozen By: %WHOFROZE%");
+			plugin.getConfig().set("meaFreeze.messages.freezeInfo.line2", "Frozen Until: %FROZENUNTIL%");
+			plugin.getConfig().set("meaFreeze.messages.freezeInfo.line3", "Code Frozen: %CODEFROZEN%");
+			plugin.getConfig().set("meaFreeze.messages.freezeInfo.line4", "Frozen On: %FROZENON%");
+			plugin.getConfig().set("meaFreeze.messages.onFrozenLogin", "You are frozen until %FROZENUNTIL%");
+			plugin.getConfig().set("meaFreeze.messages.onExempt", "%PLAYER% is exempt!");
+			plugin.getConfig().set("meaFreeze.timestamp.format", "dd/MMM/YYYY @ hh:mm:ss z");
+			plugin.getConfig().set("meaFreeze.code.characters", "abcdefghijklmnopqrstuvwxyz0123456789");
+			plugin.getConfig().set("meaFreeze.code.randomUppercase", "true");
+			plugin.getConfig().set("meaFreeze.code.length", "8");
+			plugin.getConfig().set("meaFreeze.settings.lagReduction", "false");
+			plugin.getConfig().set("meaFreeze.settings.iceDome", "true");
+			plugin.getConfig().set("meaFreeze.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.getConfig().set("meaFreeze.enabled", "true");
+			plugin.saveConfig();
+		}
+	}
+	
+	public void checkForShop() throws IOException{
+		if(plugin.getConfig().getString("meaShop.author") == null){
+			plugin.getConfig().set("meaShop.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.getConfig().set("meaShop.defaultBuySellStackAmount", "1");
+			plugin.getConfig().set("meaShop.sellAllConfirmation", "true");
+			plugin.getConfig().set("meaShop.sellInventoryConfirmation", "false");
+			plugin.getConfig().set("meaShop.defaultLookupStackAmount", "1");
+			//plugin.getConfig().set("meaShop.messagesFile", "/meaShop/messages.yml");
+			//plugin.getConfig().set("meaShop.itemsFile", "/meaShop/items.yml");
+			//plugin.getConfig().set("meaShop.logFile", "/meaShop/logs/transactions.txt");
+			//plugin.getConfig().set("meaShop.messagesFile", "/meaShop/messages.yml");
+			//plugin.getConfig().set("meaShop.discountFile", "/meaShop/discounts.yml");
+			//plugin.getConfig().set("meaShop.pricesFile", "/meaShop/prices.csv");
+			plugin.getConfig().set("meaShop.globalMessages", "true");
+			plugin.getConfig().set("meaShop.giveMostAmount", "true");
+			plugin.getConfig().set("meaShop.logToFile", "true");
+			plugin.getConfig().set("meaShop.itemsPerPage", "10");
+			plugin.getConfig().set("meaShop.discounts", "true");
+			plugin.getConfig().set("meaShop.backupLogsOnLoad", "true");
+			plugin.getConfig().set("meaShop.enabled", "true");
+			plugin.saveConfig();
 		}
 		if(!new File(this.plugin.getDataFolder()+"/meaShop/readMeBeforeDeleting.txt").exists()){
 			MeaShop shop = new MeaShop(plugin);
@@ -194,103 +191,94 @@ public class ConfigWriter {
 		}
 	}
 	
-	public void checkForEconomy(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaEconomy.author") == null){
-			config.setProperty("meaEconomy.author", "Travis Ralston : minecraft@turt2live.com");
-			//config.setProperty("meaEconomy.enabled", "true");
-			config.setProperty("meaEconomy.convertIconomy", "false");
-			config.setProperty("meaEconomy.iconomy.host", "localhost");
-			config.setProperty("meaEconomy.iconomy.port", "3306");
-			config.setProperty("meaEconomy.iconomy.user", "meaSuite");
-			config.setProperty("meaEconomy.iconomy.pass", "meaSuite");
-			config.setProperty("meaEconomy.iconomy.database", "minecraft");
-			config.setProperty("meaEconomy.iconomy.table", "iconomy");
-			config.setProperty("meaEconomy.logToFile", "true");
-			config.setProperty("meaEconomy.defaultBalance", "25.0");
-			config.setProperty("meaEconomy.messages.noPerms", "You do not have permission!");
-			//config.setProperty("meaEconomy.messages.colorVariable", "&");
-			config.setProperty("meaEconomy.messages.balance", "You have %BALANCE%");
-			config.setProperty("meaEconomy.messages.otherBalance", "%PLAYER% has %BALANCE%");
-			config.setProperty("meaEconomy.messages.onSend", "You gave %AMOUNT% to %PLAYER% making your balance %BALANCE%");
-			config.setProperty("meaEconomy.messages.onGive", "You gave %AMOUNT% to %PLAYER%");
-			config.setProperty("meaEconomy.messages.onSet", "You set %PLAYER% to have the balance %AMOUNT%");
-			config.setProperty("meaEconomy.messages.top", "%RANK%: %PLAYER% has %AMOUNT%");
-			config.setProperty("meaEconomy.messages.onGetSet", "%SENDER% set your balance to %BALANCE%");
-			config.setProperty("meaEconomy.messages.onGetPay", "You got %AMOUNT% from %SENDER% making your balance %BALANCE%");
-			config.setProperty("meaEconomy.messages.onGetGive", "You got %AMOUNT% from %SENDER% making your balance %BALANCE%");
-			config.setProperty("meaEconomy.messages.onTax", "You were taxed at %RATE% making your new balance %BALANCE%");
-			config.setProperty("meaEconomy.messages.onInterest", "You were given interest at %RATE% making your new balance %BALANCE%");
-			config.setProperty("meaEconomy.messages.onLoginBalance", "Hello %PLAYER%! Your balance is %BALANCE%");
-			config.setProperty("meaEconomy.interest", 2.0);
-			config.setProperty("meaEconomy.tax", 5.0);
-			config.setProperty("meaEconomy.doInterest", "true");
-			config.setProperty("meaEconomy.doTax", "true");
-			config.setProperty("meaEconomy.interestInterval", "1h");
-			config.setProperty("meaEconomy.taxInterval", "1h");
-			config.setProperty("meaEconomy.taxOnlineOnly", "true");
-			config.setProperty("meaEconomy.interestOnlineOnly", "true");
-			config.setProperty("meaEconomy.showBalanceOnLogin", "true");
-			config.setProperty("meaEconomy.showTop", "10");
-			config.setProperty("meaEconomy.dickMode", "true");
-			config.save();
+	public void checkForEconomy() throws IOException{
+		if(plugin.getConfig().getString("meaEconomy.author") == null){
+			plugin.getConfig().set("meaEconomy.author", "Travis Ralston : minecraft@turt2live.com");
+			//plugin.getConfig().set("meaEconomy.enabled", "true");
+			plugin.getConfig().set("meaEconomy.convertIconomy", "false");
+			plugin.getConfig().set("meaEconomy.iconomy.host", "localhost");
+			plugin.getConfig().set("meaEconomy.iconomy.port", "3306");
+			plugin.getConfig().set("meaEconomy.iconomy.user", "meaSuite");
+			plugin.getConfig().set("meaEconomy.iconomy.pass", "meaSuite");
+			plugin.getConfig().set("meaEconomy.iconomy.database", "minecraft");
+			plugin.getConfig().set("meaEconomy.iconomy.table", "iconomy");
+			plugin.getConfig().set("meaEconomy.logToFile", "true");
+			plugin.getConfig().set("meaEconomy.defaultBalance", "25.0");
+			plugin.getConfig().set("meaEconomy.messages.noPerms", "You do not have permission!");
+			//plugin.getConfig().set("meaEconomy.messages.colorVariable", "&");
+			plugin.getConfig().set("meaEconomy.messages.balance", "You have %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.otherBalance", "%PLAYER% has %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.onSend", "You gave %AMOUNT% to %PLAYER% making your balance %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.onGive", "You gave %AMOUNT% to %PLAYER%");
+			plugin.getConfig().set("meaEconomy.messages.onSet", "You set %PLAYER% to have the balance %AMOUNT%");
+			plugin.getConfig().set("meaEconomy.messages.top", "%RANK%: %PLAYER% has %AMOUNT%");
+			plugin.getConfig().set("meaEconomy.messages.onGetSet", "%SENDER% set your balance to %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.onGetPay", "You got %AMOUNT% from %SENDER% making your balance %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.onGetGive", "You got %AMOUNT% from %SENDER% making your balance %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.onTax", "You were taxed at %RATE% making your new balance %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.onInterest", "You were given interest at %RATE% making your new balance %BALANCE%");
+			plugin.getConfig().set("meaEconomy.messages.onLoginBalance", "Hello %PLAYER%! Your balance is %BALANCE%");
+			plugin.getConfig().set("meaEconomy.interest", 2.0);
+			plugin.getConfig().set("meaEconomy.tax", 5.0);
+			plugin.getConfig().set("meaEconomy.doInterest", "true");
+			plugin.getConfig().set("meaEconomy.doTax", "true");
+			plugin.getConfig().set("meaEconomy.interestInterval", "1h");
+			plugin.getConfig().set("meaEconomy.taxInterval", "1h");
+			plugin.getConfig().set("meaEconomy.taxOnlineOnly", "true");
+			plugin.getConfig().set("meaEconomy.interestOnlineOnly", "true");
+			plugin.getConfig().set("meaEconomy.showBalanceOnLogin", "true");
+			plugin.getConfig().set("meaEconomy.showTop", "10");
+			plugin.getConfig().set("meaEconomy.dickMode", "true");
+			plugin.saveConfig();
 		}
 	}
 	
-	public void checkForRandomTP(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaRandomTP.author") == null){
-			config.setProperty("meaRandomTP.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaRandomTP.enabled", "true");
-			config.setProperty("meaRandomTP.onDisabledError", "We disabled teleports for now, sorry!");
-			//config.setProperty("meaRandomTP.colorVariable", "&");
-			config.setProperty("meaRandomTP.onTP", "Woosh!");
-			config.setProperty("meaRandomTP.onEnable", "RandomTP enabled");
-			config.setProperty("meaRandomTP.onDisable", "RandomTP disabled");
-			config.setProperty("meaRandomTP.noPerms", "You can't do that!");
-			config.setProperty("meaRandomTP.minX", "250");
-			config.setProperty("meaRandomTP.minY", "250");
-			config.setProperty("meaRandomTP.maxX", "500");
-			config.setProperty("meaRandomTP.maxY", "500");
-			config.save();
+	public void checkForRandomTP() throws IOException{
+		if(plugin.getConfig().getString("meaRandomTP.author") == null){
+			plugin.getConfig().set("meaRandomTP.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.getConfig().set("meaRandomTP.enabled", "true");
+			plugin.getConfig().set("meaRandomTP.onDisabledError", "We disabled teleports for now, sorry!");
+			//plugin.getConfig().set("meaRandomTP.colorVariable", "&");
+			plugin.getConfig().set("meaRandomTP.onTP", "Woosh!");
+			plugin.getConfig().set("meaRandomTP.onEnable", "RandomTP enabled");
+			plugin.getConfig().set("meaRandomTP.onDisable", "RandomTP disabled");
+			plugin.getConfig().set("meaRandomTP.noPerms", "You can't do that!");
+			plugin.getConfig().set("meaRandomTP.minX", "250");
+			plugin.getConfig().set("meaRandomTP.minY", "250");
+			plugin.getConfig().set("meaRandomTP.maxX", "500");
+			plugin.getConfig().set("meaRandomTP.maxY", "500");
+			plugin.saveConfig();
 		}
 	}
 	
-	public void checkForChat(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaChat.author") == null){
-			config.setProperty("meaChat.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaChat.irc.server", "irc.esper.net");
-			config.setProperty("meaChat.irc.channel", "turt2live");
-			config.setProperty("meaChat.irc.MinecraftToIRC", false);
-			config.setProperty("meaChat.irc.IRCToMinecraft", false);
-			config.save();
+	public void checkForChat() throws IOException{
+		if(plugin.getConfig().getString("meaChat.author") == null){
+			plugin.getConfig().set("meaChat.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.getConfig().set("meaChat.irc.server", "irc.esper.net");
+			plugin.getConfig().set("meaChat.irc.channel", "turt2live");
+			plugin.getConfig().set("meaChat.irc.MinecraftToIRC", false);
+			plugin.getConfig().set("meaChat.irc.IRCToMinecraft", false);
+			plugin.saveConfig();
 		}
 	}
 	
-	public void checkForGoodies(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaGoodies.author") == null){
-			config.setProperty("meaGoodies.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaGoodies.noCaps", "true");
-			config.setProperty("meaGoodies.cancelSuggestionMessage", "true");
-			config.setProperty("meaGoodies.messages.onSuggestion", "Thank you for your suggestion.");
-			config.setProperty("meaGoodies.messages.onNoSuggestion", "Dumbass.");
-			config.setProperty("meaGoodies.timeFormat", "EEE, d MMM yyyy HH:mm:ss Z");
-			config.setProperty("meaGoodies.suggestionFormat", "[%TIMESTAMP%] %PLAYER% suggested %SUGGESTION%");
-			config.setProperty("meaGoodies.wrapSuggestionInQuotes", "true");
-			config.setProperty("meaGoodies.allCapsSuffix", "[Pony Rider]");
-			config.save();
+	public void checkForGoodies() throws IOException{
+		if(plugin.getConfig().getString("meaGoodies.author") == null){
+			plugin.getConfig().set("meaGoodies.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.getConfig().set("meaGoodies.noCaps", "true");
+			plugin.getConfig().set("meaGoodies.cancelSuggestionMessage", "true");
+			plugin.getConfig().set("meaGoodies.messages.onSuggestion", "Thank you for your suggestion.");
+			plugin.getConfig().set("meaGoodies.messages.onNoSuggestion", "Dumbass.");
+			plugin.getConfig().set("meaGoodies.timeFormat", "EEE, d MMM yyyy HH:mm:ss Z");
+			plugin.getConfig().set("meaGoodies.suggestionFormat", "[%TIMESTAMP%] %PLAYER% suggested %SUGGESTION%");
+			plugin.getConfig().set("meaGoodies.wrapSuggestionInQuotes", "true");
+			plugin.getConfig().set("meaGoodies.allCapsSuffix", "[Pony Rider]");
+			plugin.saveConfig();
 		}
 	}
 	
-	public void checkForHook(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
+	@SuppressWarnings("unused")
+	public void checkForHook() throws IOException{
 		String defaults[][] = {
 				{"Guest", "&8"},
 				{"Member", "&e"},
@@ -300,41 +288,38 @@ public class ConfigWriter {
 				{"Co-Owner", "&6"},
 				{"Owner", "&5"}
 		};
-		if(config.getString("meaHook.author") == null){
-			config.setProperty("meaHook.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaHook.forceMeaEconomy", "false");
-			config.setProperty("meaHook.enableAdmins", "true");
-			//config.setProperty("meaHook.allowClientSideFormatting", "true"); //Force: true
-			config.setProperty("meaHook.formats.irc", "[&9^T&f] ^R <&9^P&f>: &e^M");
-			config.setProperty("meaHook.formats.minecraft", "[&5^T&f] ^R <&5^P&f>: &e^M");
-			config.setProperty("meaHook.formats.meaChat", "[&a^T&f] ^R <&a^P&f>: &e^M");
-			config.setProperty("meaHook.formats.rank", "&f[^RC^R&f]");
-			config.setProperty("meaHook.formats.showRanks", "true"); //If off, remove "double spaces" in frmt
-			config.setProperty("meaHook.colors.ranks", Arrays.asList(defaults));
-			config.setProperty("meaHook.enableAdmins", "true");
-			config.save();
+		if(plugin.getConfig().getString("meaHook.author") == null){
+			//plugin.getConfig().set("meaHook.author", "Travis Ralston : minecraft@turt2live.com"); //TODO: TEMP
+			plugin.getConfig().set("meaHook.forceMeaEconomy", "false");
+			plugin.getConfig().set("meaHook.enableAdmins", "true");
+			//plugin.getConfig().set("meaHook.allowClientSideFormatting", "true"); //Force: true
+			plugin.getConfig().set("meaHook.formats.irc", "[&9^T&f] ^R <&9^P&f>: &e^M");
+			plugin.getConfig().set("meaHook.formats.minecraft", "[&5^T&f] ^R <&5^P&f>: &e^M");
+			plugin.getConfig().set("meaHook.formats.meaChat", "[&a^T&f] ^R <&a^P&f>: &e^M");
+			plugin.getConfig().set("meaHook.formats.rank", "&f[^RC^R&f]");
+			plugin.getConfig().set("meaHook.formats.showRanks", "true"); //If off, remove "double spaces" in frmt
+			String main = "meaHook.colors.ranks";
+			
+			plugin.getConfig().set("meaHook.enableAdmins", "true");
+			plugin.saveConfig();
 		}
 	}
 	
-	public void checkForLottery(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaLottery.author") == null){
-			config.setProperty("meaLottery.author", "Travis Ralston : minecraft@turt2live.com");
-			config.setProperty("meaLottery.enabled", "true");
-			config.setProperty("meaLottery.costOfTicket", 5.0);
-			config.setProperty("meaLottery.maxTicketsPerAccount", -1);
-			config.setProperty("meaLottery.onlineToWinMode", true);
-			config.save();
+	public void checkForLottery() throws IOException{
+		if(plugin.getConfig().getString("meaLottery.author") == null){
+			plugin.getConfig().set("meaLottery.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.getConfig().set("meaLottery.enabled", "true");
+			plugin.getConfig().set("meaLottery.costOfTicket", 5.0);
+			plugin.getConfig().set("meaLottery.maxTicketsPerAccount", -1);
+			plugin.getConfig().set("meaLottery.onlineToWinMode", true);
+			plugin.saveConfig();
 		}
 	}
 	
-	public void checkForLogger(){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		if(config.getString("meaLogger.author") == null){
-			config.setProperty("meaLogger.author", "Travis Ralston : minecraft@turt2live.com");
-			config.save();
+	public void checkForLogger() throws IOException{
+		if(plugin.getConfig().getString("meaLogger.author") == null){
+			plugin.getConfig().set("meaLogger.author", "Travis Ralston : minecraft@turt2live.com");
+			plugin.saveConfig();
 		}
 	}
 	

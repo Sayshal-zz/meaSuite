@@ -6,9 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class MeaHook {
 	
 	//Config crap
@@ -88,8 +86,6 @@ public class MeaHook {
 	}
 	
 	public String getNode(String node){
-		Configuration config = plugin.getConfiguration();
-		config.load();
-		return config.getString("meaHook."+node);
+		return plugin.getConfig().getString("meaHook."+node);
 	}
 }
