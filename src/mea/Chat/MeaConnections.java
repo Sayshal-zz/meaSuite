@@ -16,6 +16,7 @@ public class MeaConnections {
 	private HashMap<Socket, BufferedReader> readers = new HashMap<Socket, BufferedReader>();
 	private HashMap<Socket, MeaChatThread> chatThreads = new HashMap<Socket, MeaChatThread>();
 	private HashMap<Integer, MeaChatThread> chatThreadsIterable = new HashMap<Integer, MeaChatThread>();
+	private HashMap<Socket, Boolean> meaChatOnlyMode = new HashMap<Socket, Boolean>();
 	private Vector<Socket> clients = new Vector<Socket>();
 	
 	@SuppressWarnings("unused")
@@ -38,6 +39,7 @@ public class MeaConnections {
 							writers.remove(client);
 							readers.remove(client);
 							clients.remove(client);
+							meaChatOnlyMode.remove(client);
 						}
 					}
 					try{
@@ -81,6 +83,7 @@ public class MeaConnections {
 		readers.remove(socket);
 		writers.remove(socket);
 		clients.remove(socket);
+		meaChatOnlyMode.remove(socket);
 		sendToIRC("[mea] Client Disconnected: "+username);
 		sendToMinecraft("[mea] Client Disconnected: "+username);
 		sendToMea("[mea] Client Disconnected: "+username);
@@ -92,6 +95,7 @@ public class MeaConnections {
 			sendToMinecraft("[mea] Client Disconnected: "+username);
 			sendToMea("[mea] Client Disconnected: "+username);
 		}
+		meaChatOnlyMode.remove(socket);
 		readers.remove(socket);
 		writers.remove(socket);
 	}
@@ -106,6 +110,7 @@ public class MeaConnections {
 		chatThreadsIterable.clear();
 		writers.clear();
 		readers.clear();
+		meaChatOnlyMode.clear();
 	}
 	
 	public void killIRC(){

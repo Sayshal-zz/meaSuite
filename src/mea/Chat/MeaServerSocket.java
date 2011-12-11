@@ -22,6 +22,8 @@ public class MeaServerSocket {
 	private ServerSocket sock;
 	private MeaIRC irc;
 	
+	public int numguests = 0;
+	
 	public MeaServerSocket(JavaPlugin plugin, MeaChat chat, MeaIRC irc){
 		this.irc = irc;
 		this.plugin = plugin;
@@ -79,6 +81,12 @@ public class MeaServerSocket {
 			String parts[] = line.split(" ");
 			if(parts.length == 3){
 				if(chat.authenticated(parts[1], parts[2])){
+					if(numguests>0 && parts[1].equalsIgnoreCase("guest")){
+						parts[1] = "Guest"+(numguests+1);
+						numguests++;
+					}else if(numguests == 0 && parts[1].equalsIgnoreCase("guest")){
+						numguests++;
+					}
 					connections.sendToMea("setusername "+parts[1], sock);
 					connections.sendToMea("[MOTD] Welcome to "+server, sock);
 					connections.broadcastToAll("[mea] Client Connected: "+parts[1]);
