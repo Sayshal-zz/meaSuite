@@ -1,6 +1,7 @@
 package mea.Hook;
 
 import mea.Chat.MeaChat;
+import mea.Chat.MeaStringFormat;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -13,16 +14,19 @@ public class MeaHook {
 	private JavaPlugin plugin;
 	@SuppressWarnings("unused")
 	private MeaChat chat;
+	private MeaStringFormat message_format;
 
 	//Plugins
 	protected boolean Factions = false;
 	protected boolean mcMMO = false;
 	protected boolean CommandBook = false;
+	protected boolean mChat = false;
 	
 	//Hooks
 	protected CommandBookHook CommandBook_hook;
 	protected FactionsHook Factions_hook;
 	protected mcMMOHook mcMMO_hook;
+	protected mChatHook mChat_hook;
 	
 	public MeaHook(JavaPlugin plugin, MeaChat chat){
 		this.plugin = plugin;
@@ -44,23 +48,33 @@ public class MeaHook {
 			CommandBook_hook = new CommandBookHook(this);
 			CommandBook = true;
 		}
+		if(pluginExists("mChat")){
+			mChat_hook = new mChatHook(this);
+			mChat = true;
+		}
+		message_format = new MeaStringFormat(plugin);
 		System.out.println("[meaHook] Loaded!");
 	}
 	
 	public void onJoin(String player, String source){
 		String format = "^T ^P (Error: SOURCE ERR)";
+		String sMessage = "No Where";
 		if(source.equalsIgnoreCase("mc")){
 			format = getNode("formats.minecraft");
+			sMessage = "Minecraft";
 		}else if(source.equalsIgnoreCase("irc")){
 			format = getNode("formats.irc");
+			sMessage = "the IRC";
 		}else if(source.equalsIgnoreCase("mea")){
 			format = getNode("formats.meaChat");
+			sMessage = "meaChat";
 		}
-		if(getNode("formats.showRanks").equalsIgnoreCase("true")){
-			
+		if(getNode("formats.showRanks").equalsIgnoreCase("true") && mChat && source.equalsIgnoreCase("mc")){
+			format = message_format.mergeRank(mChat_hook.getGroup(player), format);
 		}else{
 			format.replaceAll("  ", " ");
 		}
+		//String message = message_format.onJoin(format, player, " * Joined "+sMessage, source);
 	}
 	
 	public void onLeave(Player player, String source, boolean kicked, String kickmessage){

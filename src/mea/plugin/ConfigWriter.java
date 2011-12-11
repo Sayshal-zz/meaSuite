@@ -17,6 +17,10 @@ package mea.plugin;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import mea.Logger.MeaLogger;
 import mea.Shop.MeaShop;
@@ -277,17 +281,7 @@ public class ConfigWriter {
 		}
 	}
 	
-	@SuppressWarnings("unused")
 	public void checkForHook() throws IOException{
-		String defaults[][] = {
-				{"Guest", "&8"},
-				{"Member", "&e"},
-				{"Developer", "&a"},
-				{"Mod", "&1"},
-				{"Admin", "&c"},
-				{"Co-Owner", "&6"},
-				{"Owner", "&5"}
-		};
 		if(plugin.getConfig().getString("meaHook.author") == null){
 			//plugin.getConfig().set("meaHook.author", "Travis Ralston : minecraft@turt2live.com"); //TODO: TEMP
 			plugin.getConfig().set("meaHook.forceMeaEconomy", "false");
@@ -296,10 +290,8 @@ public class ConfigWriter {
 			plugin.getConfig().set("meaHook.formats.irc", "[&9^T&f] ^R <&9^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.minecraft", "[&5^T&f] ^R <&5^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.meaChat", "[&a^T&f] ^R <&a^P&f>: &e^M");
-			plugin.getConfig().set("meaHook.formats.rank", "&f[^RC^R&f]");
+			plugin.getConfig().set("meaHook.formats.rank", "&f[^R&f]");
 			plugin.getConfig().set("meaHook.formats.showRanks", "true"); //If off, remove "double spaces" in frmt
-			String main = "meaHook.colors.ranks";
-			
 			plugin.getConfig().set("meaHook.enableAdmins", "true");
 			plugin.saveConfig();
 		}

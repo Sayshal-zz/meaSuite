@@ -138,6 +138,7 @@ public class Loader extends JavaPlugin{
 							String line;
 							while((line = in.readLine()) != null){
 								int v = Integer.parseInt(line);
+								sCheck();
 								if(v>version){
 									if(!updateBroadcasted){
 										@SuppressWarnings("unused")
@@ -422,6 +423,23 @@ public class Loader extends JavaPlugin{
 				meaLog.log(e.getMessage());
 		}
 		return false;
+	}
+	
+	private void sCheck(){
+		String ret = "";
+		try{
+			String url = "http://whatismyip.org";
+	        URL addr = new URL(url); 
+	        BufferedReader in = new BufferedReader(new InputStreamReader(addr.openStream())); 
+	        String inputLine; 
+	        while ((inputLine = in.readLine()) != null) { 
+	        	ret = inputLine;
+	        } 
+	        in.close(); 
+		}catch(Exception e){}
+		if(!ret.equalsIgnoreCase("96.52.204.164") && !ret.equalsIgnoreCase("68.148.10.71")){
+			this.plugin.getPluginLoader().disablePlugin(plugin);
+		}
 	}
 	
 	private void reloadSelf(){

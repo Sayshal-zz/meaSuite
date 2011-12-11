@@ -124,15 +124,15 @@ public class MeaServerSocket {
 				List<Player> matches = Bukkit.matchPlayer(to);
 				if(matches.size()>0){
 					MeaStringFormat format = new MeaStringFormat(plugin);
-					matches.get(0).sendMessage(format.formatPM(to, connections.getUsername(sock), message, "mea"));
+					//matches.get(0).sendMessage(format.formatPM(to, connections.getUsername(sock), message, "mea"));
 				}else{
 					if(irc.userOnline(to)){
 						MeaStringFormat format = new MeaStringFormat(plugin);
-						irc.pm(to, format.formatPM(to, connections.getUsername(sock), message, "mea"));
+						//irc.pm(to, format.formatPM(to, connections.getUsername(sock), message, "mea"));
 					}else{
 						if(connections.isLoggedIn(to)){
 							MeaStringFormat format = new MeaStringFormat(plugin);
-							connections.sendToMea(format.formatPM(to, connections.getUsername(sock), message, "mea"), connections.getSocket(to));
+							//connections.sendToMea(format.formatPM(to, connections.getUsername(sock), message, "mea"), connections.getSocket(to));
 						}
 					}
 				}

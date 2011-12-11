@@ -1,5 +1,7 @@
 package mea.Chat;
 
+import mea.plugin.MultiFunction;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MeaStringFormat {
@@ -10,20 +12,25 @@ public class MeaStringFormat {
 	public MeaStringFormat(JavaPlugin plugin){
 		this.plugin = plugin;
 	}
-
-	public String formatPM(String to, String from, String message, String source){
-		return null;
+	
+	public String mergeRank(String rank, String format){
+		return format.replaceAll("\\^R", rank);
 	}
 	
-	public String formatMC(String to, String from, String message){
-		return null;
+	public String addColor(String message){
+		return MultiFunction.addColor(message, plugin);
 	}
 	
-	public String formatIRC(String to, String from, String message){
-		return null;
+	public String forceMeaSuiteMessage(String message){
+		return MultiFunction.getPre(plugin)+" "+message;
 	}
-
-	public String formatMea(String to, String from, String message){
-		return null;
+	
+	public String onJoin(String format, String whoJoined, String message, String source, boolean makeItPretty){
+		String ret = format;
+		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", whoJoined).replaceAll("\\^M", message);
+		if(makeItPretty){
+			return addColor(ret);
+		}
+		return ret;
 	}
 }
