@@ -132,15 +132,18 @@ public class MeaServerSocket {
 				List<Player> matches = Bukkit.matchPlayer(to);
 				if(matches.size()>0){
 					MeaStringFormat format = new MeaStringFormat(plugin);
-					//matches.get(0).sendMessage(format.formatPM(to, connections.getUsername(sock), message, "mea"));
+					matches.get(0).sendMessage(format.formatPM(to, connections.getUsername(sock), message, "mea"));
+					connections.sendToMea(format.formatPMFrom(to, connections.getUsername(sock), message, "mea", "MC"), sock);
 				}else{
 					if(irc.userOnline(to)){
 						MeaStringFormat format = new MeaStringFormat(plugin);
-						//irc.pm(to, format.formatPM(to, connections.getUsername(sock), message, "mea"));
+						irc.pm(to, format.formatPM(to, connections.getUsername(sock), message, "mea"));
+						connections.sendToMea(format.formatPMFrom(to, connections.getUsername(sock), message, "mea", "IRC"), sock);
 					}else{
 						if(connections.isLoggedIn(to)){
 							MeaStringFormat format = new MeaStringFormat(plugin);
-							//connections.sendToMea(format.formatPM(to, connections.getUsername(sock), message, "mea"), connections.getSocket(to));
+							connections.sendToMea(format.formatPM(to, connections.getUsername(sock), message, "mea"), connections.getSocket(to));
+							connections.sendToMea(format.formatPMFrom(to, connections.getUsername(sock), message, "mea", "mea"), sock);
 						}
 					}
 				}
@@ -196,8 +199,8 @@ public class MeaServerSocket {
 		this.irc = irc;
 		connections.setIRC(irc);		
 	}
-	
-	public void toIRC(String message){
-		connections.sendToIRC(message);
+
+	public MeaConnections getChatThreads(){
+		return connections;
 	}
 }

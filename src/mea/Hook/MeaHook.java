@@ -12,7 +12,6 @@ public class MeaHook {
 	
 	//Config crap
 	private JavaPlugin plugin;
-	@SuppressWarnings("unused")
 	private MeaChat chat;
 	private MeaStringFormat message_format;
 
@@ -56,6 +55,16 @@ public class MeaHook {
 		System.out.println("[meaHook] Loaded!");
 	}
 	
+	private boolean pluginExists(String name){
+		PluginManager pm = Bukkit.getServer().getPluginManager();
+		return (pm.getPlugin(name)!=null)?true:false;
+		//(if call) ? isTrue : isFalse;
+	}
+	
+	public String getNode(String node){
+		return plugin.getConfig().getString("meaHook."+node);
+	}
+	
 	public void onJoin(String player, String source){
 		String format = "^T ^P (Error: SOURCE ERR)";
 		String sMessage = "No Where";
@@ -74,7 +83,10 @@ public class MeaHook {
 		}else{
 			format.replaceAll("  ", " ");
 		}
-		//String message = message_format.onJoin(format, player, " * Joined "+sMessage, source);
+		String message = message_format.onJoin(format, player, " * Joined "+sMessage, source, false);
+		chat.getCommunicationServer().getChatThreads().sendToIRC(message);
+		chat.getCommunicationServer().getChatThreads().sendToMea(message);
+		chat.getCommunicationServer().getChatThreads().sendToMinecraft(message_format.addColor(message));
 	}
 	
 	public void onLeave(Player player, String source, boolean kicked, String kickmessage){
@@ -92,14 +104,9 @@ public class MeaHook {
 	public void onMessage(String player, String source, String message){
 		
 	}
-	
-	private boolean pluginExists(String name){
-		PluginManager pm = Bukkit.getServer().getPluginManager();
-		return (pm.getPlugin(name)!=null)?true:false;
-		//(if call) ? isTrue : isFalse;
-	}
-	
-	public String getNode(String node){
-		return plugin.getConfig().getString("meaHook."+node);
+
+	public void onCommand(Player player, String message) {
+		// TODO Auto-generated method stub
+		
 	}
 }

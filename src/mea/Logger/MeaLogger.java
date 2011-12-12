@@ -33,17 +33,11 @@ public class MeaLogger {
 	
 	private File log;
 	private File meaChatLog;
-	private File meaShopLog;
-	private File meaEconomyLog;
 	private File meaExternalLog;
 	
 	private File logDirectory;
 	@SuppressWarnings("unused")
 	private File meaChatLogDirectory;
-	@SuppressWarnings("unused")
-	private File meaShopLogDirectory;
-	@SuppressWarnings("unused")
-	private File meaEconomyLogDirectory;
 	@SuppressWarnings("unused")
 	private File meaExternalLogDirectory;
 	
@@ -53,10 +47,6 @@ public class MeaLogger {
 	private File meaBroadcasterLocation;
 	@SuppressWarnings("unused")
 	private File meaChatLocation;
-	@SuppressWarnings("unused")
-	private File meaEconomyLocation;
-	@SuppressWarnings("unused")
-	private File meaEconomyAPILocation;
 	@SuppressWarnings("unused")
 	private File meaExternalLocation;
 	@SuppressWarnings("unused")
@@ -86,8 +76,6 @@ public class MeaLogger {
 	@SuppressWarnings("unused")
 	private File meaSamplesLocation;
 	@SuppressWarnings("unused")
-	private File meaShopLocation;
-	@SuppressWarnings("unused")
 	private File meaSQLLocation;
 	@SuppressWarnings("unused")
 	private File meaLocation;
@@ -110,21 +98,15 @@ public class MeaLogger {
 		
 		log = new File(plugin.getDataFolder()+"/meaLogger/log.txt");
 		meaChatLog = new File(plugin.getDataFolder()+"/meaChat/log.txt");
-		meaShopLog = new File(plugin.getDataFolder()+"/meaShop/logs/transactions.txt");
-		meaEconomyLog = new File(plugin.getDataFolder()+"/meaEconomy/logs/transactions.txt");
 		meaExternalLog = new File(plugin.getDataFolder()+"/meaLogger/data_transfer.txt");
 		
 		logDirectory = new File(plugin.getDataFolder()+"/meaLogger/");
 		meaChatLogDirectory = new File(plugin.getDataFolder()+"/meaChat/");
-		meaShopLogDirectory = new File(plugin.getDataFolder()+"/meaShop/logs/");
-		meaEconomyLogDirectory = new File(plugin.getDataFolder()+"/meaEconomy/logs/");
 		meaExternalLogDirectory = new File(plugin.getDataFolder()+"/meaLogger/");
 		
 		meaAPILocation = new File(plugin.getDataFolder()+"/meaAPI/");
 		meaBroadcasterLocation = new File(plugin.getDataFolder()+"/meaBroadcaster/");
 		meaChatLocation = new File(plugin.getDataFolder()+"/meaChat/");
-		meaEconomyLocation = new File(plugin.getDataFolder()+"/meaEconomy/");
-		meaEconomyAPILocation = new File(plugin.getDataFolder()+"/meaEconomyAPI/");
 		meaExternalLocation = new File(plugin.getDataFolder()+"/meaExternal/");
 		meaFlarfLocation = new File(plugin.getDataFolder()+"/meaFlarf/");
 		meaFreezerLocation = new File(plugin.getDataFolder()+"/meaFreezer/");
@@ -139,7 +121,6 @@ public class MeaLogger {
 		meaPluginLocation = new File(plugin.getDataFolder()+"/");
 		meaRandomTPLocation = new File(plugin.getDataFolder()+"/meaRandomTP/");
 		meaSamplesLocation = new File(plugin.getDataFolder()+"/samples/");
-		meaShopLocation = new File(plugin.getDataFolder()+"/meaShop/");
 		meaSQLLocation = new File(plugin.getDataFolder()+"/meaSQL/");
 		meaLocation = new File(plugin.getDataFolder()+"/");
 		
@@ -174,12 +155,10 @@ public class MeaLogger {
 		//read logs
 		if(log.exists()) returnLines.add(dump(log));
 		if(meaChatLog.exists()) returnLines.add(dump(meaChatLog));
-		if(meaShopLog.exists()) returnLines.add(dump(meaShopLog));
-		if(meaEconomyLog.exists()) returnLines.add(dump(meaEconomyLog));
 		if(meaExternalLog.exists()) returnLines.add(dump(meaExternalLog));
 		
 		//configuration
-		File file = new File(logDirectory+"/temp/temp_config_log_"+timestamp()+".log");
+		File file = new File(logDirectory+"/temp/temp_config_log_"+timestamp(true)+".log");
 		try{
 			BufferedWriter out = new BufferedWriter(new FileWriter(file, false));
 			BufferedReader in = new BufferedReader(new FileReader(meaConfiguration));
@@ -235,7 +214,7 @@ public class MeaLogger {
 				ret = "Failed";
 			}			
 			try{
-				BufferedReader in = new BufferedReader(new InputStreamReader(new URL(pastebinURL+"?mode=paste&title="+f.getName()+"_LOG_"+timestamp()+"&type=none&text="+text).openStream()));
+				BufferedReader in = new BufferedReader(new InputStreamReader(new URL(pastebinURL+"?mode=paste&title="+f.getName()+"_LOG_"+timestamp(false)+"&type=none&text="+text).openStream()));
 				String line;
 				while((line = in.readLine()) != null){
 					ret = line;
@@ -256,7 +235,7 @@ public class MeaLogger {
 				log.createNewFile();
 			}
 			BufferedWriter out = new BufferedWriter(new FileWriter(log, true));
-			out.write(timestamp()+" "+line+"\r\n");
+			out.write("["+timestamp(false)+"] "+line+"\r\n");
 			out.close();
 		}catch (Exception e){
 			e.printStackTrace();
@@ -269,29 +248,28 @@ public class MeaLogger {
 				logfile.createNewFile();
 			}
 			BufferedWriter out = new BufferedWriter(new FileWriter(logfile, true));
-			out.write(timestamp()+" "+line+"\r\n");
+			out.write("["+timestamp(false)+"] "+line+"\r\n");
 			out.close();
 		}catch (Exception e){
 			e.printStackTrace();
 		}
 	}
 	
-	public static String timestamp(){
+	public static String timestamp(boolean filemode){
 		DateFormat dateFormat = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
 		Date date = new Date();
-		return "["+dateFormat.format(date)+"]";
+		return (filemode)?(dateFormat.format(date)).replaceAll(" ", "-").replaceAll("\\:", "").replaceAll("\\,", ""):dateFormat.format(date);
 	}
 	
 	public void rotate(){
-		if(log.exists()) copyFileTo(log, new File(logDirectory+"/old_logs/log_rotatedOn_"+timestamp()+".log"), true);
-		if(meaChatLog.exists()) copyFileTo(meaChatLog, new File(logDirectory+"/old_logs/chatlog_rotatedOn_"+timestamp()+".log"), true);
-		if(meaShopLog.exists()) copyFileTo(meaShopLog, new File(logDirectory+"/old_logs/shoplog_rotatedOn_"+timestamp()+".log"), true);
-		if(meaEconomyLog.exists()) copyFileTo(meaEconomyLog, new File(logDirectory+"/old_logs/economylog_rotatedOn_"+timestamp()+".log"), true);
-		if(meaExternalLog.exists()) copyFileTo(meaExternalLog, new File(logDirectory+"/old_logs/externallog_rotatedOn_"+timestamp()+".log"), true);
+		if(log.exists()) copyFileTo(log, new File(logDirectory+"/old_logs/log_rotatedOn_"+timestamp(true)+".log"), true, true);
+		if(meaChatLog.exists()) copyFileTo(meaChatLog, new File(logDirectory+"/old_logs/chatlog_rotatedOn_"+timestamp(true)+".log"), true, true);
+		if(meaExternalLog.exists()) copyFileTo(meaExternalLog, new File(logDirectory+"/old_logs/externallog_rotatedOn_"+timestamp(true)+".log"), true, true);
 	}
 	
-	public static void copyFileTo(File original, File destination, boolean append){
+	public static void copyFileTo(File original, File destination, boolean append, boolean wipeOriginal){
 		try{
+			//System.out.println(destination.getAbsolutePath()+"/"+destination.getName());
 			if(!destination.exists()){
 				destination.createNewFile();
 			}
@@ -303,9 +281,13 @@ public class MeaLogger {
 			}
 			out.close();
 			in.close();
+			out = new BufferedWriter(new FileWriter(original, false));
+			if(wipeOriginal)
+				out.write("");
+			out.close();
 		}catch (Exception e){
 			e.printStackTrace();
-			log(e.getMessage(), new File(System.getProperty("user.dir")+"/plugins/meaLogger/log.txt"));
+			log(e.getMessage(), new File(System.getProperty("user.dir")+"/plugins/meaSuite/meaLogger/log.txt"));
 		}
 	}
 	

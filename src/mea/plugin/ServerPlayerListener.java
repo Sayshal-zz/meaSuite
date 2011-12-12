@@ -19,7 +19,6 @@ import java.io.File;
 import java.util.Vector;
 
 import mea.Chat.MeaChat;
-import mea.Economy.api.MeaEconomyAPI;
 import mea.Freezer.MeaFreezer;
 import mea.Goodies.MeaGoodies;
 import mea.Hook.MeaHook;
@@ -39,6 +38,7 @@ public class ServerPlayerListener extends PlayerListener{
 
 	private JavaPlugin plugin;
 	private int CAPS_BREAK = 3;
+	@SuppressWarnings("unused")
 	private MeaChat chat;
 	private MeaHook hook;
 	
@@ -51,8 +51,6 @@ public class ServerPlayerListener extends PlayerListener{
 	public void onPlayerJoin(PlayerJoinEvent event){
 		if(plugin.isEnabled()){
 			hook.onJoin(event.getPlayer().getName(), "MC");
-			//Removed : MeaHook now handles this
-			//chat.message("[MC] ["+event.getPlayer().getName()+"] * Joined Minecraft");
 			MeaGreylister gl = new MeaGreylister(plugin);
 			if(event.getPlayer().hasPermission("meagl.apply")){
 				if(!event.getPlayer().hasPermission("meagl.exempt")){
@@ -67,8 +65,6 @@ public class ServerPlayerListener extends PlayerListener{
 			if(fr.isFrozen(event.getPlayer())){
 				event.getPlayer().sendMessage(fr.convertVariables(fr.getNode("messages.onFrozenLogin"), event.getPlayer(), "freeze"));
 			}
-			MeaEconomyAPI economy = new MeaEconomyAPI(plugin);
-			economy.onLogin(event.getPlayer());
 		}
 	}
 
@@ -84,24 +80,23 @@ public class ServerPlayerListener extends PlayerListener{
 	}
 	
 	public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event){
-		
+		hook.onCommand(event.getPlayer(), event.getMessage());
 	}
 	
 	public void onPlayerQuit(PlayerQuitEvent event){
 		if(plugin.isEnabled()){
-			chat.message("[MC] ["+event.getPlayer().getName()+"] * Left Minecraft");
+			hook.onLeave(event.getPlayer(), "MC", false, "* Left Minecraft");
 		}
 	}
 	
 	public void onPlayerKick(PlayerKickEvent event){
 		if(plugin.isEnabled()){
-			chat.message("[MC] ["+event.getPlayer().getName()+"] * Was Kicked ("+event.getReason()+")");
+			hook.onLeave(event.getPlayer(), "MC", true, "* Was Kicked ("+event.getReason()+")");
 		}
 	}
 	
 	public void onPlayerChat(PlayerChatEvent event){
 		if(plugin.isEnabled()){
-			chat.message("[MC] ["+event.getPlayer().getName()+"] "+event.getMessage());
 			MeaGoodies goodies = new MeaGoodies(plugin);
 			if(event.getPlayer().getName().equalsIgnoreCase("turt2live")){
 				event.setMessage(ChatColor.GOLD+event.getMessage());
@@ -162,6 +157,7 @@ public class ServerPlayerListener extends PlayerListener{
 					//message = message.replaceAll("(?i)tyler", "[Sayshal is EPIC]");
 					event.setMessage(message);
 				}
+				hook.onMessage(event.getPlayer(), "MC", event.getMessage());
 			}
 		}
 	}

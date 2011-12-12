@@ -9,6 +9,7 @@ import net.D3GN.MiracleM4n.mChat.mChatAPI;
 
 public class mChatHook {
 
+	@SuppressWarnings("unused")
 	private MeaHook hook;
 	private mChatAPI mChat;
 	

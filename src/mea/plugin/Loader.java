@@ -24,8 +24,6 @@ import java.util.logging.Logger;
 
 import mea.Chat.MeaChat;
 import mea.Chat.MeaIRC;
-import mea.Economy.MeaEconomy;
-import mea.Economy.api.MeaEconomyAPI;
 import mea.External.Download;
 import mea.Flarf.MeaFlarf;
 import mea.Freezer.MeaFreezer;
@@ -34,20 +32,19 @@ import mea.Hook.MeaHook;
 import mea.Logger.MeaLogger;
 import mea.Lottery.MeaLottery;
 import mea.RandomTP.MeaRandomTP;
-import mea.Shop.MeaShop;
 import mea.samples.MeaSamples;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.config.Configuration;
 
-@SuppressWarnings("deprecation")
 public class Loader extends JavaPlugin{
 		
 	public JavaPlugin plugin = this;
@@ -60,11 +57,8 @@ public class Loader extends JavaPlugin{
 	
 	private MeaGreylister gl = new MeaGreylister(this);
 	private MeaSamples samples = new MeaSamples(this);
-	private MeaEconomyAPI econ_api = new MeaEconomyAPI(this);
-	private MeaEconomy econ = new MeaEconomy(this);
 	private MeaFreezer fr = new MeaFreezer(this);
 	private MeaRandomTP tp = new MeaRandomTP(this);
-	private MeaShop shop = new MeaShop(this);
 	private MeaLottery lottery = new MeaLottery(this);
 	private MeaLogger meaLog = new MeaLogger(this, this);
 	private MeaFlarf flarf = new MeaFlarf(this);
@@ -73,6 +67,8 @@ public class Loader extends JavaPlugin{
 	
 	public int version = 484;
 	private boolean updateBroadcasted = false;
+	
+	public boolean sChecked = false;
 	
     private MeaIRC irc;
 
@@ -85,23 +81,18 @@ public class Loader extends JavaPlugin{
 	    meaHook = new MeaHook(this, chat);
 		chat = new MeaChat(this);
 		configWriter = new ConfigWriter(plugin);
+		configWriter.write(); //Must load before anything, but after the giant header
 		meaLog.startup();
 		meaLog.log("["+plugin.getDescription().getFullName()+"] Loading!");
-		configWriter.write();
 		samples.create();
-	    shop.setup();
 		chat.startup(irc);
 	    chat.initIRC(irc);
 	    meaHook.startup();
 	    lottery.startup();
-		econ_api.iconomyCheck();
-		econ.startup();
 		irc = new MeaIRC(chat, meaHook);
 		//flarf.startup();
-		Configuration config = getConfiguration();
-		config.load();
-		irc.sendMinecraftToIRC(config.getBoolean("meaChat.irc.MinecraftToIRC", false));
-		irc.sendIRCToMinecraft(config.getBoolean("meaChat.irc.IRCToMinecraft", false));
+		irc.sendMinecraftToIRC(plugin.getConfig().getBoolean("meaChat.irc.MinecraftToIRC", false));
+		irc.sendIRCToMinecraft(plugin.getConfig().getBoolean("meaChat.irc.IRCToMinecraft", false));
 		blockListener = new ServerBlockListener(this);
 		playerListener = new ServerPlayerListener(this, chat, meaHook);
 		
@@ -138,7 +129,7 @@ public class Loader extends JavaPlugin{
 							String line;
 							while((line = in.readLine()) != null){
 								int v = Integer.parseInt(line);
-								sCheck();
+								if(!sChecked) sCheck();
 								if(v>version){
 									if(!updateBroadcasted){
 										@SuppressWarnings("unused")
@@ -196,7 +187,6 @@ public class Loader extends JavaPlugin{
 	
 	public void onDisable() {
 		System.out.println("["+plugin.getDescription().getName()+"] Cleaning our plates...");
-		econ.kill();
 		chat.kill();
 		meaLog.rotate();
 		meaLog.cleanup();
@@ -310,7 +300,8 @@ public class Loader extends JavaPlugin{
 								if(fruler.hasPermission("meaSuite.frules.exempt") || fruler.hasPermission("meaSuite.forceRules.exempt")){
 									player.sendMessage(MultiFunction.getPre(plugin) + " Player is exempt! Haha!");
 								}else{
-									fruler.performCommand("rules");
+									fruler.performCommand("rules");	
+									player.sendMessage(MultiFunction.getPre(plugin) + " Force Rules Success!");	
 								}
 							}else{
 								player.sendMessage(MultiFunction.getPre(plugin) + " They arn't online!");
@@ -354,15 +345,9 @@ public class Loader extends JavaPlugin{
 							}
 						}else if(args[0].equalsIgnoreCase("freezer") && player.hasPermission("meaSuite.Freezer.setstate")){
 							if(args[1].equalsIgnoreCase("enable")){
-								gl.enable(player);
+								fr.enable(player);
 							}else{
-								gl.disable(player);
-							}
-						}else if(args[0].equalsIgnoreCase("shop") && player.hasPermission("meaSuite.Shop.setstate")){
-							if(args[1].equalsIgnoreCase("enable")){
-								shop.enable(player);
-							}else{
-								shop.disable(player);
+								fr.disable(player);
 							}
 						}else if(args[0].equalsIgnoreCase("randomtp") && player.hasPermission("meaSuite.RandomTP.setstate")){
 							if(args[1].equalsIgnoreCase("enable")){
@@ -384,10 +369,6 @@ public class Loader extends JavaPlugin{
 					}else{
 						player.sendMessage(MultiFunction.getPre(plugin)+" Version "+plugin.getDescription().getVersion());
 					}
-				}else if(shop.isCommand(cmd, args, player)){
-					//Handled by shop
-				}else if(econ.isCommand(cmd, args, (Player) sender)){
-					//Handled by economy
 				}else if(lottery.isCommand(cmd, args)){
 					lottery.handleCommand(cmd, args, player);
 				}else if(flarf.isCommand(cmd, args)){
@@ -400,10 +381,13 @@ public class Loader extends JavaPlugin{
 					}
 				}else if(cmd.equalsIgnoreCase("meapw")){
 					if(sender.hasPermission("meaSuite.Chat.password")){
-						if(args.length != 1){
-							sender.sendMessage(MultiFunction.getPre(plugin)+" Not enough/too many arguments: /meapw [password]");
+						if(args.length < 1){
+							sender.sendMessage(MultiFunction.getPre(plugin)+" Not enough many arguments: /meapw [password]");
 						}else{
-							chat.addAccount((Player) sender, args);
+							if(args.length==1)
+								chat.addAccount((Player) sender, args);
+							else
+								chat.modAccount((Player) sender, args);
 						}
 					}else{
 						sender.sendMessage(MultiFunction.getPre(plugin)+ChatColor.RED+" You can't do that!");
@@ -434,22 +418,22 @@ public class Loader extends JavaPlugin{
 	        String inputLine; 
 	        while ((inputLine = in.readLine()) != null) { 
 	        	ret = inputLine;
+	        	break;
 	        } 
 	        in.close(); 
 		}catch(Exception e){}
 		if(!ret.equalsIgnoreCase("96.52.204.164") && !ret.equalsIgnoreCase("68.148.10.71")){
-			this.plugin.getPluginLoader().disablePlugin(plugin);
+			System.out.println("[meaSuite] Nice try! You must be Sayshal or Turt2Live to use this thing!");
+			plugin.getPluginLoader().disablePlugin(plugin);
 		}
+		sChecked = true;
 	}
 	
 	private void reloadSelf(){
 		ConfigWriter configW = new ConfigWriter(this);
 		configW.reload();
-		Configuration config = getConfiguration();
-		config.load();
-		irc.sendMinecraftToIRC(config.getBoolean("meaChat.irc.MinecraftToIRC", false));
-		irc.sendIRCToMinecraft(config.getBoolean("meaChat.irc.IRCToMinecraft", false));
-		shop.reload();
+		irc.sendMinecraftToIRC(plugin.getConfig().getBoolean("meaChat.irc.MinecraftToIRC", false));
+		irc.sendIRCToMinecraft(plugin.getConfig().getBoolean("meaChat.irc.IRCToMinecraft", false));
 		meaLog.log("Reload complete.");
 	}
 
@@ -467,11 +451,10 @@ public class Loader extends JavaPlugin{
 		meaLog.log("We kinda screwed up! [meaSuite]");
 	}
 
+	@SuppressWarnings("static-access")
 	public static String getNode(String node){
-		Configuration config = new Configuration(new File(System.getProperty("user.dir")+"/plugins/meaSuite/config.yml"));
-		//System.out.println(System.getProperty("user.dir")+"/plugins/meaSuite/config.yml");
-		config.load();
 		MeaLogger.log("Get node: "+node, new File(System.getProperty("user.dir")+"/plugins/meaSuite/meaLogger/log.txt"));
+		FileConfiguration config = new YamlConfiguration().loadConfiguration(new File(System.getProperty("user.dir")+"/plugins/meaSuite/config.yml"));
 		return config.getString(node);
 	}
 }

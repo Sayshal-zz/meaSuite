@@ -9,6 +9,7 @@ import mea.SQL.MeaSQL;
 import mea.plugin.MultiFunction;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jibble.pircbot.Colors;
@@ -75,11 +76,32 @@ public class MeaChat {
 			e.printStackTrace();
 		}
 		if(rows>=1){
-			sql.query("INSERT INTO `chat_users` (`mc_username`, `password`) VALUES ('"+player.getName()+"', '"+password+"');");
-			player.sendMessage(MultiFunction.getPre(plugin)+" Password changed.");
+			player.sendMessage(MultiFunction.getPre(plugin)+ChatColor.RED+" Incorrect amount of arguments! /meapw <old> <new>");
 		}else{
 			sql.query("INSERT INTO `chat_users` (`mc_username`, `password`) VALUES ('"+player.getName()+"', '"+password+"');");
 			player.sendMessage(MultiFunction.getPre(plugin)+" Password set.");
+		}
+	}
+	
+	public void modAccount(Player player, String args[]){
+		String password = args[0];
+		password = MultiFunction.encodePassword(password);
+		password = MultiFunction.encodePassword(password); //Double encoded because of SHA1 x-fer from client
+		MeaSQL sql = new MeaSQL(plugin);
+		ResultSet results = sql.query("SELECT * FROM `chat_users` WHERE `mc_username`='"+player.getName()+"'");
+		int rows = 0;
+		try {
+			while(results.next()){
+				rows++;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(rows>=1){
+			sql.query("INSERT INTO `chat_users` (`mc_username`, `password`) VALUES ('"+player.getName()+"', '"+password+"');");
+			player.sendMessage(MultiFunction.getPre(plugin)+" Password changed.");
+		}else{
+			player.sendMessage(MultiFunction.getPre(plugin)+ChatColor.RED+" You must set a password first!");
 		}
 	}
 	
@@ -102,7 +124,7 @@ public class MeaChat {
 		Bukkit.getPluginManager().disablePlugin(plugin);
 	}
 	
-	public void toIRC(String message){
-		socket.toIRC(message);
+	public MeaServerSocket getCommunicationServer(){
+		return socket;
 	}
 }

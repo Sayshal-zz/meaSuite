@@ -6,7 +6,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class MeaStringFormat {
 	
-	@SuppressWarnings("unused")
 	private JavaPlugin plugin;
 	
 	public MeaStringFormat(JavaPlugin plugin){
@@ -32,5 +31,28 @@ public class MeaStringFormat {
 			return addColor(ret);
 		}
 		return ret;
+	}
+	
+	public String formatPM(String to, String from, String message, String source){
+		if(source.equalsIgnoreCase("mea")){
+			String format = getFormat("meaPM");
+			format = format.replaceAll("\\^T", "mea").replaceAll("\\^P", from).replaceAll("\\^M", message);
+			return format;
+		}
+		return null;
+	}
+	
+	public String formatPMFrom(String to, String from, String message, String source, String destination){
+		if(source.equalsIgnoreCase("mea")){
+			String format = getFormat("meaPM");
+			format = format.replaceAll("\\^T", "mea").replaceAll("\\^P", from).replaceAll("\\^M", message);
+			format = "TO: "+destination+" >> "+to+" | "+format;
+			return format;
+		}
+		return null;
+	}
+	
+	private String getFormat(String formatName){
+		return plugin.getConfig().getString("meaChat.formats."+formatName);
 	}
 }

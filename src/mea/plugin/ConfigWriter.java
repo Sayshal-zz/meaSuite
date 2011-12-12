@@ -17,13 +17,8 @@ package mea.plugin;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import mea.Logger.MeaLogger;
-import mea.Shop.MeaShop;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -43,7 +38,7 @@ public class ConfigWriter {
 		try{
 			File d = plugin.getDataFolder();
 			d.mkdirs();
-			File f2 = new File(plugin.getDataFolder()+"/plugin.getConfig().yml");
+			File f2 = new File(plugin.getDataFolder()+"/config.yml");
 			if(!f2.exists()){
 				f2.createNewFile();
 				if(plugin.getConfig().getString("meaSuite.author") == null){
@@ -65,16 +60,6 @@ public class ConfigWriter {
 			d = new File(plugin.getDataFolder()+"/meaFreeze/frozen_players");
 			d.mkdirs();
 			checkForFreeze();
-			d = new File(plugin.getDataFolder()+"/meaShop/logs");
-			d.mkdirs();
-			d = new File(plugin.getDataFolder()+"/meaShop/player_information");
-			d.mkdirs();
-			checkForShop();
-			d = new File(plugin.getDataFolder()+"/meaEconomy/logs");
-			d.mkdirs();
-			d = new File(plugin.getDataFolder()+"/meaEconomy/player_information");
-			d.mkdirs();
-			checkForEconomy();
 			//d = new File(plugin.getDataFolder()+"/RandomTP");
 			//d.mkdirs();
 			checkForRandomTP();
@@ -167,76 +152,6 @@ public class ConfigWriter {
 		}
 	}
 	
-	public void checkForShop() throws IOException{
-		if(plugin.getConfig().getString("meaShop.author") == null){
-			plugin.getConfig().set("meaShop.author", "Travis Ralston : minecraft@turt2live.com");
-			plugin.getConfig().set("meaShop.defaultBuySellStackAmount", "1");
-			plugin.getConfig().set("meaShop.sellAllConfirmation", "true");
-			plugin.getConfig().set("meaShop.sellInventoryConfirmation", "false");
-			plugin.getConfig().set("meaShop.defaultLookupStackAmount", "1");
-			//plugin.getConfig().set("meaShop.messagesFile", "/meaShop/messages.yml");
-			//plugin.getConfig().set("meaShop.itemsFile", "/meaShop/items.yml");
-			//plugin.getConfig().set("meaShop.logFile", "/meaShop/logs/transactions.txt");
-			//plugin.getConfig().set("meaShop.messagesFile", "/meaShop/messages.yml");
-			//plugin.getConfig().set("meaShop.discountFile", "/meaShop/discounts.yml");
-			//plugin.getConfig().set("meaShop.pricesFile", "/meaShop/prices.csv");
-			plugin.getConfig().set("meaShop.globalMessages", "true");
-			plugin.getConfig().set("meaShop.giveMostAmount", "true");
-			plugin.getConfig().set("meaShop.logToFile", "true");
-			plugin.getConfig().set("meaShop.itemsPerPage", "10");
-			plugin.getConfig().set("meaShop.discounts", "true");
-			plugin.getConfig().set("meaShop.backupLogsOnLoad", "true");
-			plugin.getConfig().set("meaShop.enabled", "true");
-			plugin.saveConfig();
-		}
-		if(!new File(this.plugin.getDataFolder()+"/meaShop/readMeBeforeDeleting.txt").exists()){
-			MeaShop shop = new MeaShop(plugin);
-			shop.setup();
-		}
-	}
-	
-	public void checkForEconomy() throws IOException{
-		if(plugin.getConfig().getString("meaEconomy.author") == null){
-			plugin.getConfig().set("meaEconomy.author", "Travis Ralston : minecraft@turt2live.com");
-			//plugin.getConfig().set("meaEconomy.enabled", "true");
-			plugin.getConfig().set("meaEconomy.convertIconomy", "false");
-			plugin.getConfig().set("meaEconomy.iconomy.host", "localhost");
-			plugin.getConfig().set("meaEconomy.iconomy.port", "3306");
-			plugin.getConfig().set("meaEconomy.iconomy.user", "meaSuite");
-			plugin.getConfig().set("meaEconomy.iconomy.pass", "meaSuite");
-			plugin.getConfig().set("meaEconomy.iconomy.database", "minecraft");
-			plugin.getConfig().set("meaEconomy.iconomy.table", "iconomy");
-			plugin.getConfig().set("meaEconomy.logToFile", "true");
-			plugin.getConfig().set("meaEconomy.defaultBalance", "25.0");
-			plugin.getConfig().set("meaEconomy.messages.noPerms", "You do not have permission!");
-			//plugin.getConfig().set("meaEconomy.messages.colorVariable", "&");
-			plugin.getConfig().set("meaEconomy.messages.balance", "You have %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.otherBalance", "%PLAYER% has %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.onSend", "You gave %AMOUNT% to %PLAYER% making your balance %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.onGive", "You gave %AMOUNT% to %PLAYER%");
-			plugin.getConfig().set("meaEconomy.messages.onSet", "You set %PLAYER% to have the balance %AMOUNT%");
-			plugin.getConfig().set("meaEconomy.messages.top", "%RANK%: %PLAYER% has %AMOUNT%");
-			plugin.getConfig().set("meaEconomy.messages.onGetSet", "%SENDER% set your balance to %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.onGetPay", "You got %AMOUNT% from %SENDER% making your balance %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.onGetGive", "You got %AMOUNT% from %SENDER% making your balance %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.onTax", "You were taxed at %RATE% making your new balance %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.onInterest", "You were given interest at %RATE% making your new balance %BALANCE%");
-			plugin.getConfig().set("meaEconomy.messages.onLoginBalance", "Hello %PLAYER%! Your balance is %BALANCE%");
-			plugin.getConfig().set("meaEconomy.interest", 2.0);
-			plugin.getConfig().set("meaEconomy.tax", 5.0);
-			plugin.getConfig().set("meaEconomy.doInterest", "true");
-			plugin.getConfig().set("meaEconomy.doTax", "true");
-			plugin.getConfig().set("meaEconomy.interestInterval", "1h");
-			plugin.getConfig().set("meaEconomy.taxInterval", "1h");
-			plugin.getConfig().set("meaEconomy.taxOnlineOnly", "true");
-			plugin.getConfig().set("meaEconomy.interestOnlineOnly", "true");
-			plugin.getConfig().set("meaEconomy.showBalanceOnLogin", "true");
-			plugin.getConfig().set("meaEconomy.showTop", "10");
-			plugin.getConfig().set("meaEconomy.dickMode", "true");
-			plugin.saveConfig();
-		}
-	}
-	
 	public void checkForRandomTP() throws IOException{
 		if(plugin.getConfig().getString("meaRandomTP.author") == null){
 			plugin.getConfig().set("meaRandomTP.author", "Travis Ralston : minecraft@turt2live.com");
@@ -290,6 +205,7 @@ public class ConfigWriter {
 			plugin.getConfig().set("meaHook.formats.irc", "[&9^T&f] ^R <&9^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.minecraft", "[&5^T&f] ^R <&5^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.meaChat", "[&a^T&f] ^R <&a^P&f>: &e^M");
+			plugin.getConfig().set("meaHook.formats.meaPM", "[&5meaPM&f] [&a^T&f] <&a^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.rank", "&f[^R&f]");
 			plugin.getConfig().set("meaHook.formats.showRanks", "true"); //If off, remove "double spaces" in frmt
 			plugin.getConfig().set("meaHook.enableAdmins", "true");

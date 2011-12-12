@@ -44,7 +44,7 @@ public class MeaIRC extends PircBot{
 		if(sender!=getName()){
 			if(message.length()>200){
 				message = message.substring(0, 200);
-				chat.toIRC("[mea] [meaBot:IRC] * Sorry "+sender+"! Message was too long, shortened to 200 characters.");
+				chat.getCommunicationServer().getChatThreads().sendToIRC("[mea] [meaBot:IRC] * Sorry "+sender+"! Message was too long, shortened to 200 characters.");
 			}
 			hook.onMessage(sender, "IRC", message);
 		}
