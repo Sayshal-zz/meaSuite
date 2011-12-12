@@ -37,7 +37,7 @@ public class MeaSamples {
 			if(!new File(plugin.getDataFolder()+"/samples/readMeBeforeDeleting.txt").exists()){
 				File directory = new File(this.plugin.getDataFolder()+"/samples");
 				directory.mkdirs();
-				Download download = new Download(new URL("http://68.148.10.71/mc/plugins/ext/meaSuite/samples/pack.zip"), this.plugin.getDataFolder()+"/samples/pack.zip");
+				Download download = new Download(new URL("http://68.148.10.71/mc/plugins/ext/meaSuite/samples/pack.zip"), this.plugin.getDataFolder()+"/samples/pack.zip", true);
 				Unzip unzip = new Unzip(this.plugin.getDataFolder()+"/samples/pack.zip", this.plugin.getDataFolder()+"/samples/");
 				File file = new File(this.plugin.getDataFolder()+"/samples/pack.zip");
 				file.delete();
