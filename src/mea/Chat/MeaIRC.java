@@ -23,7 +23,7 @@ public class MeaIRC extends PircBot{
 		setAutoNickChange(true);
 		boolean connected = true;
 		try {
-			System.out.println("[meaIRC] Connecting to "+chat.getIRCNode("server")+" channel "+chat.getIRCNode("channel"));
+			System.out.println("[meaIRC] Connecting to "+chat.getIRCNode("server")+" channel #"+chat.getIRCNode("channel"));
 			connect(chat.getIRCNode("server"));
 		} catch (NickAlreadyInUseException e) {
 			System.out.println("[meaIRC] Cannot connect to IRC: Username in use \"meaBot\"");

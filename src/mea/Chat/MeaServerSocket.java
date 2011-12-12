@@ -89,7 +89,7 @@ public class MeaServerSocket {
 					}
 					connections.sendToMea("setusername "+parts[1], sock);
 					connections.sendToMea("[MOTD] Welcome to "+server, sock);
-					connections.broadcastToAll("[mea] Client Connected: "+parts[1]);
+					chat.hook.onJoin(parts[1], "mea");
 				}else{
 					connections.sendToMea("noauth", sock);
 				}

@@ -17,7 +17,6 @@ public class MeaChatThread implements Runnable{
 	private MeaIRC irc;
 	@SuppressWarnings("unused")
 	private MeaServerSocket server;
-	@SuppressWarnings("unused")
 	private MeaChat chat;
 	@SuppressWarnings("unused")
 	private PrintStream writer;
@@ -57,6 +56,7 @@ public class MeaChatThread implements Runnable{
 						if(parts.length==2){
 							username = parts[1];
 						}
+						chat.hook.onLeave(username, "mea", false, "* Disconnected");
 						connections.removeConnection(socket, username);
 					}else if(line.startsWith("setusername")){
 							String parts[] = line.split(" ");
@@ -66,7 +66,8 @@ public class MeaChatThread implements Runnable{
 							}
 							setUsername(username);
 					}else{
-						connections.broadcastToAll(line);
+						line = line.replaceAll("\\[mea\\] \\["+username+"\\] ", ""); //Build 255 of chat
+						chat.hook.onMessage(username, "mea", line);
 					}
 				}
 			}

@@ -3,6 +3,7 @@ package mea.Chat;
 import mea.plugin.MultiFunction;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jibble.pircbot.Colors;
 
 public class MeaStringFormat {
 	
@@ -13,11 +14,18 @@ public class MeaStringFormat {
 	}
 	
 	public String mergeRank(String rank, String format){
-		return format.replaceAll("\\^R", rank);
+		return format.replaceAll("\\|R", rank);
 	}
 	
 	public String addColor(String message){
 		return MultiFunction.addColor(message, plugin);
+	}
+	
+	public String removeColor(String message){
+		message = MultiFunction.removeColor(message, plugin);
+		message = Colors.removeColors(message);
+		message = Colors.removeFormatting(message);
+		return message;
 	}
 	
 	public String forceMeaSuiteMessage(String message){
@@ -31,25 +39,25 @@ public class MeaStringFormat {
 	public String formatPM(String to, String from, String message, String source){
 		if(source.equalsIgnoreCase("mea")){
 			String format = getFormat("meaPM");
-			format = format.replaceAll("\\^T", "mea").replaceAll("\\^P", from).replaceAll("\\^M", message);
+			format = format.replaceAll("\\|T", "mea").replaceAll("\\|P", from).replaceAll("\\|M", message);
 			return format;
 		}
-		return null;
+		return message;
 	}
 	
 	public String formatPMFrom(String to, String from, String message, String source, String destination){
 		if(source.equalsIgnoreCase("mea")){
 			String format = getFormat("meaPM");
-			format = format.replaceAll("\\^T", "mea").replaceAll("\\^P", from).replaceAll("\\^M", message);
+			format = format.replaceAll("\\|T", "mea").replaceAll("\\|P", from).replaceAll("\\|M", message);
 			format = "TO: "+destination+" >> "+to+" | "+format;
 			return format;
 		}
-		return null;
+		return message;
 	}
 	
 	public String onJoin(String format, String whoJoined, String message, String source, boolean makeItPretty){
 		String ret = format;
-		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", whoJoined).replaceAll("\\^M", message);
+		ret = format.replaceAll("\\|T", source).replaceAll("\\|P", whoJoined).replaceAll("\\|M", message);
 		if(makeItPretty){
 			return addColor(ret);
 		}
@@ -58,19 +66,19 @@ public class MeaStringFormat {
 
 	public String onLeave(String format, String whoLeft, String message, String source, boolean makeItPretty) {
 		String ret = format;
-		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", whoLeft).replaceAll("\\^M", message);
+		ret = format.replaceAll("\\|T", source).replaceAll("\\|P", whoLeft).replaceAll("\\|M", message);
 		if(makeItPretty){
 			return addColor(ret);
 		}
-		return null;
+		return ret;
 	}
 
 	public String onMessage(String format, String player, String message, String source, boolean makeItPretty) {
 		String ret = format;
-		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", player).replaceAll("\\^M", message);
+		ret = format.replaceAll("\\|T", source).replaceAll("\\|P", player).replaceAll("\\|M", message);
 		if(makeItPretty){
 			return addColor(ret);
 		}
-		return null;
+		return ret;
 	}
 }

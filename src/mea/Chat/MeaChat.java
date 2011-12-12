@@ -4,6 +4,7 @@ import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import mea.Hook.MeaHook;
 import mea.Logger.MeaLogger;
 import mea.SQL.MeaSQL;
 import mea.plugin.MultiFunction;
@@ -19,6 +20,7 @@ public class MeaChat {
 	private JavaPlugin plugin;
 	private int port = 4408;
 	MeaServerSocket socket;
+	public MeaHook hook;
 	
 	public MeaChat(JavaPlugin plugin){
 		this.plugin = plugin;
@@ -30,6 +32,10 @@ public class MeaChat {
 		System.out.println("Chat loaded!");
 		MeaSQL sql = new MeaSQL(plugin);
 		sql.query("CREATE TABLE IF NOT EXISTS `chat_users` (`mc_username` text NOT NULL, `password` text NOT NULL);");
+	}
+	
+	public void initHook(MeaHook hook){
+		this.hook = hook;
 	}
 	
 	public void initIRC(MeaIRC irc){
