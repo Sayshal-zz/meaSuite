@@ -24,13 +24,8 @@ public class MeaStringFormat {
 		return MultiFunction.getPre(plugin)+" "+message;
 	}
 	
-	public String onJoin(String format, String whoJoined, String message, String source, boolean makeItPretty){
-		String ret = format;
-		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", whoJoined).replaceAll("\\^M", message);
-		if(makeItPretty){
-			return addColor(ret);
-		}
-		return ret;
+	private String getFormat(String formatName){
+		return plugin.getConfig().getString("meaChat.formats."+formatName);
 	}
 	
 	public String formatPM(String to, String from, String message, String source){
@@ -52,7 +47,30 @@ public class MeaStringFormat {
 		return null;
 	}
 	
-	private String getFormat(String formatName){
-		return plugin.getConfig().getString("meaChat.formats."+formatName);
+	public String onJoin(String format, String whoJoined, String message, String source, boolean makeItPretty){
+		String ret = format;
+		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", whoJoined).replaceAll("\\^M", message);
+		if(makeItPretty){
+			return addColor(ret);
+		}
+		return ret;
+	}
+
+	public String onLeave(String format, String whoLeft, String message, String source, boolean makeItPretty) {
+		String ret = format;
+		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", whoLeft).replaceAll("\\^M", message);
+		if(makeItPretty){
+			return addColor(ret);
+		}
+		return null;
+	}
+
+	public String onMessage(String format, String player, String message, String source, boolean makeItPretty) {
+		String ret = format;
+		ret = format.replaceAll("\\^T", source).replaceAll("\\^P", player).replaceAll("\\^M", message);
+		if(makeItPretty){
+			return addColor(ret);
+		}
+		return null;
 	}
 }
