@@ -175,8 +175,8 @@ public class ConfigWriter {
 			plugin.getConfig().set("meaChat.author", "Travis Ralston : minecraft@turt2live.com");
 			plugin.getConfig().set("meaChat.irc.server", "irc.esper.net");
 			plugin.getConfig().set("meaChat.irc.channel", "turt2live");
-			plugin.getConfig().set("meaChat.irc.MinecraftToIRC", false);
-			plugin.getConfig().set("meaChat.irc.IRCToMinecraft", false);
+			plugin.getConfig().set("meaChat.irc.MinecraftToIRC", true);
+			plugin.getConfig().set("meaChat.irc.IRCToMinecraft", true);
 			plugin.saveConfig();
 		}
 	}
@@ -202,11 +202,14 @@ public class ConfigWriter {
 			plugin.getConfig().set("meaHook.forceMeaEconomy", "false");
 			plugin.getConfig().set("meaHook.enableAdmins", "true");
 			//plugin.getConfig().set("meaHook.allowClientSideFormatting", "true"); //Force: true
-			plugin.getConfig().set("meaHook.formats.irc", "[&9^T&f] ^R <&9^P&f>: &e^M");
-			plugin.getConfig().set("meaHook.formats.minecraft", "[&5^T&f] ^R <&5^P&f>: &e^M");
-			plugin.getConfig().set("meaHook.formats.meaChat", "[&a^T&f] ^R <&a^P&f>: &e^M");
-			plugin.getConfig().set("meaHook.formats.meaPM", "[&5meaPM&f] [&a^T&f] <&a^P&f>: &e^M");
-			plugin.getConfig().set("meaHook.formats.command", "[&a^T&f] ^R <&a^P&f>: &e^M");
+			plugin.getConfig().set("meaHook.formats.irc", "[&9|T&f] <&9|P&f>: &e|M");
+			plugin.getConfig().set("meaHook.formats.minecraft", "[&5|T&f] |R <&5|P&f>: &e|M");
+			plugin.getConfig().set("meaHook.formats.meaChat", "[&a|T&f] <&a|P&f>: &e|M");
+			plugin.getConfig().set("meaHook.formats.meaPM", "[&5meaPM&f] [&a|T&f] <&a|P&f>: &e|M");
+			plugin.getConfig().set("meaHook.formats.LQJ.minecraft", "[&5|T&f] |R <&5|P&f> &e|M");
+			plugin.getConfig().set("meaHook.formats.LQJ.meaChat", "[&a|T&f] <&a|P&f> &e|M");
+			plugin.getConfig().set("meaHook.formats.LQJ.meaPM", "[&5meaPM&f] [&a|T&f] <&a|P&f> &e|M");
+			plugin.getConfig().set("meaHook.formats.command", "[&a|T&f] |R <&a|P&f> &e|M");
 			plugin.getConfig().set("meaHook.formats.rank", "&f[^R&f]");
 			plugin.getConfig().set("meaHook.formats.showRanks", "true"); //If off, remove "double spaces" in frmt
 			plugin.getConfig().set("meaHook.enableAdmins", "true");

@@ -157,8 +157,8 @@ public class ServerPlayerListener extends PlayerListener{
 					//message = message.replaceAll("(?i)tyler", "[Sayshal is EPIC]");
 					event.setMessage(message);
 				}
-				hook.onMessage(event.getPlayer(), "MC", event.getMessage());
 			}
+			hook.onMessage(event.getPlayer(), "MC", event.getMessage());
 		}
 	}
 }

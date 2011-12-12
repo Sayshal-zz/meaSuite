@@ -70,6 +70,34 @@ public class MultiFunction {
 		return message;
 	}
 	
+	public static String removeColor(String message, JavaPlugin plugin){
+		String colorSeperator = plugin.getConfig().getString("meaSuite.colorVariable");
+		message = message.replaceAll(colorSeperator+"0", "");
+		message = message.replaceAll(colorSeperator+"1", "");
+		message = message.replaceAll(colorSeperator+"2", "");
+		message = message.replaceAll(colorSeperator+"3", "");
+		message = message.replaceAll(colorSeperator+"4", "");
+		message = message.replaceAll(colorSeperator+"5", "");
+		message = message.replaceAll(colorSeperator+"6", "");
+		message = message.replaceAll(colorSeperator+"7", "");
+		message = message.replaceAll(colorSeperator+"8", "");
+		message = message.replaceAll(colorSeperator+"9", "");
+		message = message.replaceAll(colorSeperator+"a", "");
+		message = message.replaceAll(colorSeperator+"b", "");
+		message = message.replaceAll(colorSeperator+"c", "");
+		message = message.replaceAll(colorSeperator+"d", "");
+		message = message.replaceAll(colorSeperator+"e", "");
+		message = message.replaceAll(colorSeperator+"f", "");
+		message = message.replaceAll(colorSeperator+"A", "");
+		message = message.replaceAll(colorSeperator+"B", "");
+		message = message.replaceAll(colorSeperator+"C", "");
+		message = message.replaceAll(colorSeperator+"D", "");
+		message = message.replaceAll(colorSeperator+"E", "");
+		message = message.replaceAll(colorSeperator+"F", "");
+		message = ChatColor.stripColor(message);
+		return message;
+	}
+	
 	public static void fireFeature(Player player){
 		Location location = player.getLocation();
 		location.setY(location.getY()+0.5);

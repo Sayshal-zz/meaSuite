@@ -65,7 +65,7 @@ public class Loader extends JavaPlugin{
 	
 	private ConfigWriter configWriter;
 	
-	public int version = 484;
+	public int version = 529;
 	private boolean updateBroadcasted = false;
 	
 	public boolean sChecked = false;
@@ -78,24 +78,25 @@ public class Loader extends JavaPlugin{
 		System.out.println("["+plugin.getDescription().getFullName()+"] Loading!");
 		//System.out.println("************************************");
 	    //Module start
-	    meaHook = new MeaHook(this, chat);
+		//Try not to move these around too much, the order is important
 		chat = new MeaChat(this);
 		configWriter = new ConfigWriter(plugin);
-		configWriter.write(); //Must load before anything, but after the giant header
+		configWriter.write();
 		meaLog.startup();
 		meaLog.log("["+plugin.getDescription().getFullName()+"] Loading!");
 		samples.create();
 		chat.startup(irc);
-	    chat.initIRC(irc);
-	    meaHook.startup();
 	    lottery.startup();
+	    meaHook = new MeaHook(this, chat);
+	    meaHook.startup();
+	    chat.initHook(meaHook);
 		irc = new MeaIRC(chat, meaHook);
 		//flarf.startup();
 		irc.sendMinecraftToIRC(plugin.getConfig().getBoolean("meaChat.irc.MinecraftToIRC", false));
 		irc.sendIRCToMinecraft(plugin.getConfig().getBoolean("meaChat.irc.IRCToMinecraft", false));
+	    chat.initIRC(irc);
 		blockListener = new ServerBlockListener(this);
 		playerListener = new ServerPlayerListener(this, chat, meaHook);
-		
 		//To avoid errors
 		Runnable events = new Runnable(){
 			public void run() {
@@ -133,7 +134,7 @@ public class Loader extends JavaPlugin{
 								if(v>version){
 									if(!updateBroadcasted){
 										@SuppressWarnings("unused")
-										Download download = new Download(new URL("http://68.148.10.71/mc/plugins/meaSuite.jar"), System.getProperty("user.dir")+"/plugins/meaSuite.jar", false);
+										Download download = new Download(new URL("http://68.148.10.71/mc/plugins/meaSuite.jar"), System.getProperty("user.dir")+"/plugins/meaSuite.jar", true);
 										updateBroadcasted = true;
 										meaLog.log("Downloaded meaSuite.jar build "+v+" (Current Version "+version+")");
 									}
@@ -148,7 +149,7 @@ public class Loader extends JavaPlugin{
 										if(vDev>version){
 											if(!updateBroadcasted){
 												@SuppressWarnings("unused")
-												Download download = new Download(new URL("http://68.148.10.71/mc/plugins/meaSuite.jar"), System.getProperty("user.dir")+"/plugins/meaSuite.jar", false);
+												Download download = new Download(new URL("http://68.148.10.71/mc/plugins/meaSuite.jar"), System.getProperty("user.dir")+"/plugins/meaSuite.jar", true);
 												updateBroadcasted = true;
 												meaLog.log("Downloaded meaSuite.jar DEV build "+v+" (Current Version "+version+")");
 											}
@@ -453,7 +454,7 @@ public class Loader extends JavaPlugin{
 
 	@SuppressWarnings("static-access")
 	public static String getNode(String node){
-		MeaLogger.log("Get node: "+node, new File(System.getProperty("user.dir")+"/plugins/meaSuite/meaLogger/log.txt"));
+		//MeaLogger.log("Get node: "+node, new File(System.getProperty("user.dir")+"/plugins/meaSuite/meaLogger/log.txt"));
 		FileConfiguration config = new YamlConfiguration().loadConfiguration(new File(System.getProperty("user.dir")+"/plugins/meaSuite/config.yml"));
 		return config.getString(node);
 	}
