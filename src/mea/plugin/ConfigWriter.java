@@ -206,6 +206,7 @@ public class ConfigWriter {
 			plugin.getConfig().set("meaHook.formats.minecraft", "[&5^T&f] ^R <&5^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.meaChat", "[&a^T&f] ^R <&a^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.meaPM", "[&5meaPM&f] [&a^T&f] <&a^P&f>: &e^M");
+			plugin.getConfig().set("meaHook.formats.command", "[&a^T&f] ^R <&a^P&f>: &e^M");
 			plugin.getConfig().set("meaHook.formats.rank", "&f[^R&f]");
 			plugin.getConfig().set("meaHook.formats.showRanks", "true"); //If off, remove "double spaces" in frmt
 			plugin.getConfig().set("meaHook.enableAdmins", "true");
