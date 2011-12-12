@@ -29,7 +29,7 @@ import mea.Logger.MeaLogger;
 
 public class Unzip {
 
-	private File log = new File("/meaLogger/data_transfer.txt");
+	private File log = new File(System.getProperty("user.dir")+"/plugins/meaSuite/meaLogger/data_transfer.txt");
 	
 	public static final void copyInputStream(InputStream in, OutputStream out)
 			throws IOException {

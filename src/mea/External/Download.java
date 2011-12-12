@@ -24,7 +24,7 @@ public class Download {
 	public static double downloadSize = 0;
 	public static double downloadAmount = 0;
 	public static int lastDownloadPercent = 0;
-	private File log = new File("/meaLogger/data_transfer.txt");
+	private File log = new File(System.getProperty("user.dir")+"/plugins/meaSuite/meaLogger/data_transfer.txt");
 	public static String getDownloadStatus(){
 		double pert = (downloadAmount/downloadSize)*100;
 		int percent = (int) pert;
@@ -98,47 +98,4 @@ public class Download {
 	            System.out.println(io);
 	        }
 	    }
-	
-    public Download(URL url, String filename) throws Exception {
-        URLConnection con;  // represents a connection to the url we want to dl.
-        DataInputStream dis;  // input stream that will read data from the file.
-        FileOutputStream fos; //used to write data from inut stream to file.
-        byte[] fileData;  //byte aray used to hold data from downloaded file.
-        try {
-            con = url.openConnection(); // open the url connection.
-            dis = new DataInputStream(con.getInputStream()); // get a data stream from the url connection.
-            fileData = new byte[con.getContentLength()]; // determine how many byes the file size is and make array big enough to hold the data
-            //System.out.println("Getting URL and file information...");
-            downloadSize = fileData.length;
-            int t1 = 0;
-           // Thread.sleep(2000);
-            for (int x = 0; x < fileData.length; x++) { // fill byte array with bytes from the data input stream
-                fileData[x] = dis.readByte();
-                if(t1==0){
-                	t1=1;
-                	//System.out.println("Downloading File. This may take a while.");
-                }
-                downloadAmount = x+1;
-                if(getDownloadPercent()== 100){
-                	String parts[] = filename.split("\\/");
-                	String file = parts[parts.length-2];
-                	System.out.println(file+" :: "+getDownloadStatus());
-                	lastDownloadPercent = getDownloadPercent();
-                }
-            }
-            dis.close(); // close the data input stream
-          //  System.out.println("Finishing download....");
-            //Thread.sleep(900);
-            fos = new FileOutputStream(new File(filename));  //create an object representing the file we want to save
-            fos.write(fileData);  // write out the file we want to save.
-            fos.close(); // close the output stream writer
-            //System.out.println("Download Complete.");
-        }
-        catch(MalformedURLException m) {
-            System.out.println(m);
-        }
-        catch(IOException io) {
-            System.out.println(io);
-        }
-    }
 }
